@@ -1,20 +1,18 @@
-import React from "react";
-import "./style.css";
+import React from 'react';
+import './style.css';
 
 export default function App() {
-
-  dataModel: {
-    profileImage:''
-  }
+  const personalName = 'Cristian Levrero';
+  const profileImage =
+    'https://cristian-test-bucket.s3.us-east-2.amazonaws.com/profile-picture.png';
   return (
-    <main>
+    <>
       <aside>
-        <img alt="una bella foto"/>
-        <contactCard iconList=""></contactCard>
+        <img src={profileImage} alt="una bella foto" />
+        <contactCard itemList="" actionsList=""></contactCard>
       </aside>
-      <h1>Hello StackBlitz!</h1>
+      <h1> {personalName}</h1>
       <p>Start editing to see some magic happen :)</p>
-    </main>
+    </>
   );
 }
-
