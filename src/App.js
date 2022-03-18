@@ -17,24 +17,54 @@ export default function App() {
         </header>
         <section>
           <h2>Profile</h2>
-          <p>The developer has +15 years professional experience in front-end web technologies, featuring web standards and the best programming practices. His background includes solid Interface design, architecture, and modularization knowledge.</p>
-          <p>The developer has +15 years professional experience in front-end web technologies, featuring web standards and the best programming practices. His background includes solid Interface design, architecture, and modularization knowledge.</p>
-          <p>His work experience includes survey and functional analysis of requirements requested by different areas, planning and estimation of tasks to be performed, design and implementation, maintenance, user tracking, analytics, third-party solutions integration, first stage testing and validation and deployment of developed solutions.</p>
+          <p>
+            The developer has +15 years professional experience in front-end web
+            technologies, featuring web standards and the best programming
+            practices. His background includes solid Interface design,
+            architecture, and modularization knowledge.
+          </p>
+          <p>
+            The developer has +15 years professional experience in front-end web
+            technologies, featuring web standards and the best programming
+            practices. His background includes solid Interface design,
+            architecture, and modularization knowledge.
+          </p>
+          <p>
+            His work experience includes survey and functional analysis of
+            requirements requested by different areas, planning and estimation
+            of tasks to be performed, design and implementation, maintenance,
+            user tracking, analytics, third-party solutions integration, first
+            stage testing and validation and deployment of developed solutions.
+          </p>
         </section>
         <section>
           <h2>Qualifications</h2>
-          <cl-quealifications expPoints="5"></cl-quealifications>
+          <cl-quealifications
+            expPoints="5"
+            name="HTML"
+            description={['maquetado', 'accesibilidad', 'posicionamiento']}
+          />
+          <cl-quealifications
+            expPoints="5"
+            name="Angular"
+            description={['maquetado', 'accesibilidad', 'posicionamiento']}
+          />
+          <cl-quealifications
+            expPoints="5"
+            name="Wordpress"
+            description={['maquetado', 'accesibilidad', 'posicionamiento']}
+          />
+          <cl-quealifications
+            expPoints="5"
+            name="UX analysis"
+            description={['maquetado', 'accesibilidad', 'posicionamiento']}
+          />
         </section>
-        <section>
-        </section>
-        <section>
-        </section>
-        <section>
-        </section>
-        <section>
-        </section>
-        <section>
-        </section>
+        <section></section>
+        <section></section>
+        <section></section>
+        <section></section>
+        <section></section>
       </main>
     </>
   );
