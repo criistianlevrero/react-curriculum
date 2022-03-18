@@ -2,17 +2,40 @@ import React from 'react';
 import './style.css';
 
 export default function App() {
-  const personalName = 'Cristian Levrero';
   const profileImage =
     'https://cristian-test-bucket.s3.us-east-2.amazonaws.com/profile-picture.png';
   return (
     <>
       <aside>
         <img src={profileImage} alt="una bella foto" />
-        <contactCard itemList="" actionsList=""></contactCard>
+        <cl-contactCard itemList="" actionsList=""></cl-contactCard>
       </aside>
-      <h1> {personalName}</h1>
-      <p>Start editing to see some magic happen :)</p>
+      <main>
+        <header>
+          <h1>Cristian Levrero</h1>
+          <p>Front end engineer, UI specialist</p>
+        </header>
+        <section>
+          <h2>Profile</h2>
+          <p>The developer has +15 years professional experience in front-end web technologies, featuring web standards and the best programming practices. His background includes solid Interface design, architecture, and modularization knowledge.</p>
+          <p>The developer has +15 years professional experience in front-end web technologies, featuring web standards and the best programming practices. His background includes solid Interface design, architecture, and modularization knowledge.</p>
+          <p>His work experience includes survey and functional analysis of requirements requested by different areas, planning and estimation of tasks to be performed, design and implementation, maintenance, user tracking, analytics, third-party solutions integration, first stage testing and validation and deployment of developed solutions.</p>
+        </section>
+        <section>
+          <h2>Qualifications</h2>
+          <cl-quealifications expPoints="5"></cl-quealifications>
+        </section>
+        <section>
+        </section>
+        <section>
+        </section>
+        <section>
+        </section>
+        <section>
+        </section>
+        <section>
+        </section>
+      </main>
     </>
   );
 }
