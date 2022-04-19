@@ -1,5 +1,7 @@
 import React from 'react';
 import './style.css';
+import { Qualifications } from './components/qualifications/Qualifications';
+
 
 export default function App() {
   const profileImage =
@@ -39,26 +41,28 @@ export default function App() {
         </section>
         <section>
           <h2>Qualifications</h2>
-          <cl-quealifications
-            expPoints="5"
-            name="HTML"
-            description={['maquetado', 'accesibilidad', 'posicionamiento']}
-          />
-          <cl-quealifications
-            expPoints="5"
-            name="Angular"
-            description={['maquetado', 'accesibilidad', 'posicionamiento']}
-          />
-          <cl-quealifications
-            expPoints="5"
-            name="Wordpress"
-            description={['maquetado', 'accesibilidad', 'posicionamiento']}
-          />
-          <cl-quealifications
-            expPoints="5"
-            name="UX analysis"
-            description={['maquetado', 'accesibilidad', 'posicionamiento']}
-          />
+          <dl>
+            <Qualifications
+              expPoints="5"
+              name="HTML"
+              description={['maquetado', 'accesibilidad', 'posicionamiento']}
+            />
+            <Qualifications
+              expPoints="4"
+              name="Angular"
+              description={['maquetado', 'accesibilidad', 'posicionamiento']}
+            />
+            <Qualifications
+              expPoints="3"
+              name="Wordpress"
+              description={['maquetado', 'accesibilidad', 'posicionamiento']}
+            />
+            <Qualifications
+              expPoints="4"
+              name="UX analysis"
+              description={['maquetado', 'accesibilidad', 'posicionamiento']}
+            />
+          </dl>
         </section>
         <section></section>
         <section></section>
