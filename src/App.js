@@ -1,7 +1,7 @@
 import React from 'react';
-import './style.css';
+import './style.scss';
 import { Qualifications } from './components/qualifications/Qualifications';
-
+import { Experience } from './components/experience/Experience';
 
 export default function App() {
   const profileImage =
@@ -64,7 +64,19 @@ export default function App() {
             />
           </dl>
         </section>
-        <section></section>
+        <section>
+          <h2>Work experience</h2>
+          <Experience companyName="Naranja X (Jun 2020 - Present)" year="2020">
+            <h4>UI / front-end engeneer.</h4>
+            <p>The propose of this project was to bring an Angular UI library for all the Naranja web app ecosystem.</p>
+            <p>Activities on the project included:</p>
+            <ul>
+              <li>Create high quality components and layouts</li>
+              <li>Documentation maintenance</li>
+              <li>Usability and accessibility research</li>
+            </ul>
+          </Experience>
+        </section>
         <section></section>
         <section></section>
         <section></section>
