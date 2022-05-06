@@ -1,3 +1,2 @@
-# react-fgmrmc
+# curriculum react
 
-[Edit on StackBlitz ⚡️](https://stackblitz.com/edit/react-fgmrmc)
