@@ -1,21 +1,10 @@
+var watch = require('node-watch');
+const path = require('path');
+const ROOT_DIR = path.join(__dirname, "../");
 
-console.log("hola guachín");
-
-const StyleDictionary = require('style-dictionary').extend({
-  source: ['../design-tokens/*.json'],
-  platforms: {
-    scss: {
-      transformGroup: 'scss',
-      buildPath: '../',
-      files: [{
-        destination: 'main-variables.scss',
-        format: 'scss/variables'
-      }]
-    }
-    // ...
-  }
+watch(`${ROOT_DIR}/design-tokens/`, { recursive: true }, function(evt, name) {
+  require('child_process').fork(`${ROOT_DIR}/scripts/foundations-build.js`);
+  console.log('%s changed.', name);
 });
 
-StyleDictionary.buildAllPlatforms();
-
-console.log("terminamo guacho");
+require('child_process').fork(`${ROOT_DIR}/scripts/foundations-build.js`);

@@ -1,43 +1,73 @@
 import React from 'react';
+import {useState, useEffect} from "react";
 import './style.scss';
 import { Qualifications } from './components/qualifications/Qualifications';
 import { Experience } from './components/experience/Experience';
+import { Profile } from './components/profile/Profile';
+import styles from './home.module.scss';
+var classNames = require('classnames');
+
+const query = `{
+  personalData(id: "2wscO3EoyDEFK5PPX4R424") {
+    name
+    subheading
+    email
+    profile {
+      json
+    }
+    location
+  }
+}`;
+
 
 export default function App() {
+
+  const [pageModel, setpageModel] = useState(null);
+
+  useEffect(() => {
+    window
+      .fetch(`https://graphql.contentful.com/content/v1/spaces/h2xj79xdxq5r/`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          // Authenticate the request
+          Authorization: "Bearer dtD_lAL0wrlAybfYaTIZ7Fk4yWwHufbpTWaibFd2VwE",
+        },
+        // send the GraphQL query
+        body: JSON.stringify({ query }),
+      })
+      .then((response) => response.json())
+      .then(({ data, errors }) => {
+        if (errors) {
+          console.error(errors);
+        }
+
+        console.log(data.personalData);
+        // rerender the entire component with new data
+        setpageModel(data.personalData);
+      });
+  }, []);
+
+  if (!pageModel) {
+    return "Loading...";
+  }
+
   const profileImage =
     'https://cristian-test-bucket.s3.us-east-2.amazonaws.com/profile-picture.png';
+  
   return (
-    <>
-      <aside>
-        <img src={profileImage} alt="una bella foto" />
-        <cl-contactCard itemList="" actionsList=""></cl-contactCard>
+    <div className={classNames(styles.resumeLayout, 'typography-body01')}>
+      <aside className={styles.resumeLayout__sideCard}>
+        <Profile profileImage={ profileImage }></Profile>
       </aside>
-      <main>
-        <header>
-          <h1>Cristian Levrero</h1>
-          <p>Front end engineer, UI specialist</p>
+      <main className={styles.resumeLayout__mainContent}>
+        <header >
+          <h1 className={classNames([styles.header__title, 'typography-hero'])}>{pageModel.name}</h1>
+          <p className={classNames([styles.header__description, 'typography-hero-secondary'])}>{pageModel.subheading}</p>
         </header>
         <section>
           <h2>Profile</h2>
-          <p>
-            The developer has +15 years professional experience in front-end web
-            technologies, featuring web standards and the best programming
-            practices. His background includes solid Interface design,
-            architecture, and modularization knowledge.
-          </p>
-          <p>
-            The developer has +15 years professional experience in front-end web
-            technologies, featuring web standards and the best programming
-            practices. His background includes solid Interface design,
-            architecture, and modularization knowledge.
-          </p>
-          <p>
-            His work experience includes survey and functional analysis of
-            requirements requested by different areas, planning and estimation
-            of tasks to be performed, design and implementation, maintenance,
-            user tracking, analytics, third-party solutions integration, first
-            stage testing and validation and deployment of developed solutions.
-          </p>
+          {pageModel.profile.json.content[0].content[0].value}
         </section>
         <section>
           <h2>Qualifications</h2>
@@ -82,6 +112,6 @@ export default function App() {
         <section></section>
         <section></section>
       </main>
-    </>
+    </div>
   );
 }

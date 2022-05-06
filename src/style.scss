@@ -1,3 +1,6 @@
+@use './foundations/scss/variables/variables' as vars;
+@import 'src/foundations/scss/typography/typography-styles';
+
 body {
-  background-color: #FFFFFF;
+  background-color: vars.$color-white;
 }

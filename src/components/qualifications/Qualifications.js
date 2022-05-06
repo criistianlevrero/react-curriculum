@@ -1,10 +1,9 @@
 import React, { useState } from 'react'
 import { PropTypes } from 'prop-types';
-import './Qalifications.scss';
+import styles from './Qalifications.module.scss';
+var classNames = require('classnames');
 
 export const Qualifications = ({ expPoints, name, description}) => {
-
-  var classNames = require('classnames');
 
   const totalStarts = 5;
 
@@ -12,7 +11,7 @@ export const Qualifications = ({ expPoints, name, description}) => {
     let starsArray = [];
     for (let i = 0; i < totalStarts; i++) {
       starsArray.push(
-        <span aria-hidden="true" key={i} className={ classNames(['rating__star', i > expPoints - 1 ? ' rating__star--empty' : '']) }></span>
+        <span aria-hidden="true" key={i} className={ classNames([styles.rating__star, i > expPoints - 1 ? styles['rating__star--empty'] : '']) }></span>
       )
       
     }
@@ -21,11 +20,11 @@ export const Qualifications = ({ expPoints, name, description}) => {
   
 
   return (
-    <><dt className="qualification-name">
+    <><dt className={styles.qualification-name}>
         {name}
       </dt>
       <dd>
-        <span className="rating" role="img" aria-label={ name + ': ' + expPoints + ' out of 5 stars' }>
+        <span className={styles.rating} role="img" aria-label={ name + ': ' + expPoints + ' out of 5 stars' }>
           {renderStars()}
         </span>
       </dd>

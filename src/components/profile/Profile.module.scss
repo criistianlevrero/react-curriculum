@@ -1,0 +1,17 @@
+.profile {
+  &__picture {
+    padding-bottom: 100%;
+    height: 0;
+  }
+
+  &__image {
+    width: 100%;
+    height: auto;
+    position: relative;
+    top: -50px;
+  }
+
+}
+.contactBox {
+  background-color: aqua;
+}

@@ -10,21 +10,27 @@
     "classnames": "^2.3.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "sass": "^1.50.0",
-    "typescript": "^4.6.3"
+    "reset-css": "^5.0.1",
+    "sass": "^1.50.0"
   },
   "scripts": {
-    "start": "npm-run-all start:*",
+    "start": "npm-run-all --parallel start:*",
     "start:foundations": "node ./src/foundations/scripts/foundations-start.js",
     "start:react": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "npm-run-all --parallel build:*",
+    "build:react": "react-scripts build",
+    "build:foundations": "node ./src/foundations/scripts/foundations-build.js",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
   "devDependencies": {
+    "node-watch": "^0.7.3",
     "npm-run-all": "^4.1.5",
     "react-scripts": "latest",
-    "style-dictionary": "^3.7.0"
+    "style-dictionary": "^3.7.0",
+    "stylelint": "^14.7.1",
+    "stylelint-config-standard": "^25.0.0",
+    "typescript": "^4.6.3"
   },
   "browserslist": {
     "production": [
