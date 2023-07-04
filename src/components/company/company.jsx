@@ -1,20 +1,18 @@
 import React, { useState } from 'react'
 import { PropTypes } from 'prop-types';
-import './Experience.scss';
+import styles from './company.module.scss';
 
 
-export const Experience = ({ companyName, year, children}) => {
+
+export const Company = ({ companyName, from, to, children}) => {
 
   var classNames = require('classnames');
 
   return (
     <section className='experience'>
-      <h3 className='experience__company-name'>{companyName}</h3>
+      <h3 className='experience__company-name'>{companyName}({from} - {to})</h3>
       <div className='experience__content-layout'>
-        <div className='experience__year'>{year}</div>
-        <div className='experience__content-richtext'>
-          {children}
-        </div>
+        {children}
       </div>
     </section>
   )

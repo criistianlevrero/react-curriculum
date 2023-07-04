@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { PropTypes } from 'prop-types';
-import styles from './Qalifications.module.scss';
+import styles from './qalifications.module.scss';
 var classNames = require('classnames');
 
 export const Qualifications = ({ expPoints, name, description}) => {

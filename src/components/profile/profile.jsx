@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { PropTypes } from 'prop-types';
-import styles from './Profile.module.scss';
-import { Card } from '../card/Card';
+import styles from './profile.module.scss';
+import { Card } from '../card/card';
 
 
 export const Profile = ({ profileImage, year, children}) => {
