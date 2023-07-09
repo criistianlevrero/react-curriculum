@@ -6,8 +6,6 @@ import styles from './company.module.scss';
 
 export const Company = ({ companyName, from, to, children}) => {
 
-  var classNames = require('classnames');
-
   return (
     <section className='experience'>
       <h3 className='experience__company-name'>{companyName}({from} - {to})</h3>

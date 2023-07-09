@@ -5,8 +5,6 @@ import styles from './project.module.scss';
 
 export const Project = ({ projectName, year, children}) => {
 
-  var classNames = require('classnames');
-
   return (
     <div>
       <div className='experience__year'>{year}</div>

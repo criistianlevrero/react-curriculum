@@ -1,0 +1,15 @@
+@use './foundations/scss/variables/variables' as vars;
+
+.header {
+  content: '';
+
+  &__title {
+    text-align: center;
+  }
+
+  &__description {
+    text-align: center;
+    top: -205px;
+    position: relative;
+  }
+}

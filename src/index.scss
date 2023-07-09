@@ -1,0 +1,18 @@
+@use './foundations/scss/variables/variables' as vars;
+@import './foundations/scss/typography/typography-styles';
+@import './foundations/scss/general/reset.scss';
+
+
+:root {
+  @extend .typography-body01;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background-color: vars.$color-white;
+}

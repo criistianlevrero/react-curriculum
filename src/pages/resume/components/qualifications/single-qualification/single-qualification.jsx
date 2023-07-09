@@ -1,17 +1,16 @@
-import React, { useState } from 'react'
 import { PropTypes } from 'prop-types';
-import styles from './qalifications.module.scss';
-var classNames = require('classnames');
+import styles from './single-qualification.module.scss';
 
-export const Qualifications = ({ expPoints, name, description}) => {
+export const SingleQualification = ({ expPoints, name, description}) => {
 
   const totalStarts = 5;
 
   const renderStars = () => {
     let starsArray = [];
     for (let i = 0; i < totalStarts; i++) {
+      //classNames([styles.star, i > expPoints - 1 ? styles['starEmpty'] : ''])
       starsArray.push(
-        <span aria-hidden="true" key={i} className={ classNames([styles.rating__star, i > expPoints - 1 ? styles['rating__star--empty'] : '']) }></span>
+        <span aria-hidden="true" key={i} className={''}></span>
       )
       
     }
@@ -20,7 +19,8 @@ export const Qualifications = ({ expPoints, name, description}) => {
   
 
   return (
-    <><dt className={styles.qualification-name}>
+    <div className={styles.qualifications}>
+      <dt className={styles.qualificationName}>
         {name}
       </dt>
       <dd>
@@ -28,12 +28,12 @@ export const Qualifications = ({ expPoints, name, description}) => {
           {renderStars()}
         </span>
       </dd>
-    </>
+    </div>
   )
 }
 
-Qualifications.propTypes = {
+SingleQualification.propTypes = {
   name: PropTypes.string.isRequired,
-  expPoints: PropTypes.string.isRequired,
+  expPoints: PropTypes.number.isRequired,
   description: PropTypes.array.isRequired,
 }
