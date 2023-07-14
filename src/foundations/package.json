@@ -1,0 +1,17 @@
+{
+  "name": "foundations",
+  "version": "0",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node ./src/foundations-start.js",
+    "build": "node ./src/foundations-build.js"
+  },
+  "dependencies": {
+    "@ctrl/tinycolor": "^3.4.0",
+    "deepmerge": "^4.3.1",
+    "node-watch": "^0.7.3",
+    "style-dictionary": "^3.7.0",
+    "stylelint": "^14.7.1",
+    "stylelint-config-standard": "^25.0.0"
+  }
+}

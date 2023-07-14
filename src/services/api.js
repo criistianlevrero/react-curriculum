@@ -52,7 +52,7 @@ export default function fetchData(setpageModel) {
             console.error(errors);
         }
     
-        //console.log(data);
+        console.log(data);
         // rerender the entire component with new data
         setpageModel(data);
     });

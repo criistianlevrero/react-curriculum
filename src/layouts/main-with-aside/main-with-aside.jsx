@@ -12,7 +12,7 @@ export default function MainWithAsideLayout({ aside, main }) {
       <aside>
         {aside}
       </aside>
-      <main>
+      <main className={styles.main}>
         {main}
       </main>
     </div>

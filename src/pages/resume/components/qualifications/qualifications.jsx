@@ -5,8 +5,7 @@ import { SingleQualification } from './single-qualification/single-qualification
 export const Qualifications = ({ dataModel }) => {
 
   return (
-    <section>
-        <h2>Qualifications</h2>
+    <>
         <dl className={styles.qualifications}>
         {dataModel.map((qualification, index) => (
             <SingleQualification
@@ -17,6 +16,6 @@ export const Qualifications = ({ dataModel }) => {
             />
         ))}
         </dl>
-    </section>
+    </>
   )
 }

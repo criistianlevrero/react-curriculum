@@ -1,4 +1,4 @@
-@use './foundations/scss/variables/variables' as vars;
+@use '@foundations/variables/variables' as vars;
 @import './foundations/scss/typography/typography-styles';
 @import './foundations/scss/general/reset.scss';
 
@@ -15,4 +15,5 @@
 
 body {
   background-color: vars.$color-white;
+  background-color: rgb(168, 141, 141);
 }

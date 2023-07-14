@@ -1,15 +1,23 @@
-@use './foundations/scss/variables/variables' as vars;
+@use '@foundations/variables/variables' as vars;
+@import '@foundations/typography/typography-styles';
+
+.mainContainer {
+  width: 100%;
+  max-width: 37rem;
+}
 
 .header {
-  content: '';
+  margin-top: 9rem;
 
-  &__title {
+  &Title {
+    @extend .typography-hero;
     text-align: center;
   }
 
-  &__description {
+  &Description {
+    @extend .typography-hero-secondary;
     text-align: center;
-    top: -205px;
+    top: -8rem;
     position: relative;
   }
 }

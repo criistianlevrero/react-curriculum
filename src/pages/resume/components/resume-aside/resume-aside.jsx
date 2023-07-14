@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
 import { PropTypes } from 'prop-types';
-import styles from './profile.module.scss';
+import styles from './resume-aside.module.scss';
 import { Card } from '@components/card/card';
 
 
-export const Profile = ({ profileImage, year, children}) => {
+export const ResumeAside = ({ profileImage, year, children}) => {
   return (
     <div className={styles.profile}>
       <Card>
