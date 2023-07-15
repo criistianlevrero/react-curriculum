@@ -8,6 +8,7 @@ export default defineConfig({
   resolve: {
     alias: [
       { find: "@assets", replacement: path.resolve(__dirname, "src/assets") },
+      { find: "@svg-library", replacement: path.resolve(__dirname, "src/foundations/svg-library/_sprites.svg") },
       { find: "@components", replacement: path.resolve(__dirname, "src/components") },
       { find: "@foundations", replacement: path.resolve(__dirname, "src/foundations/scss") },
       { find: "@layouts", replacement: path.resolve(__dirname, "src/layouts") },

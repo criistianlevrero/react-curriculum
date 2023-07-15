@@ -1,0 +1,23 @@
+@use '@foundations/variables/variables' as vars;
+@import '@foundations/typography/typography-styles';
+
+.helperCommon {
+  @extend .typography-body02;
+  display: flex;
+  align-items: center;
+  color: vars.$color-black-typography;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.button {
+  @extend .helperCommon;
+  border: none;
+  background: none;
+  padding: 0;
+  
+}
+
+.link {
+  @extend .helperCommon;
+}

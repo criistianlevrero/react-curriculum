@@ -1,6 +1,6 @@
 @use '@foundations/variables/variables' as vars;
-@import './foundations/scss/typography/typography-styles';
-@import './foundations/scss/general/reset.scss';
+@import '@foundations/typography/typography-styles';
+@import '@foundations/general/reset.scss';
 
 
 :root {
