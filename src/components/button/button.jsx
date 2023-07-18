@@ -3,7 +3,7 @@ import styles from './button.module.scss';
 
 export const Button = ({ iconName = '', label = '', showLabel = false, onClick = () => {}, href='', target='_self' }) => {
     
-    const iconSize = '1.75rem'
+    const iconSize = '2rem'
     
     if (href != '') {
         return (

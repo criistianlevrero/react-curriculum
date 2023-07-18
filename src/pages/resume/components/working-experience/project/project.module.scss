@@ -1,0 +1,27 @@
+@use '@foundations/typography/typography-styles' as typography;
+
+.layout {
+    display: grid;
+    grid-template-columns: 8.5rem auto;
+    column-gap: 2rem;
+    margin-top: 2.5rem;
+}
+
+.year {
+    @include typography.typographyFactory(title01);
+    text-align: end;
+}
+
+.content {
+    margin-top: 0.75rem;
+}
+
+.projectName {
+    @include typography.typographyFactory(title04);
+    align-items: end;
+    display: flex;
+}
+
+.description {
+    
+}

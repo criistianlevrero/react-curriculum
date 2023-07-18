@@ -12,13 +12,13 @@ const ICONS_LIBRARY_DIR = `${ROOT_DIR}/svg-library/_sprites.svg`
 fs.readdir(ICONS_DIR, (err, files) => {
     //handling error
     if (err) {
-        return console.log('Unable to scan directory: ' + err);
+        return console.info('Unable to scan directory: ' + err);
     } 
 
     var sprites = svgstore()
 
     files.map(function (file) {
-        console.log('adding ',file.replace('.svg', ''), `${ICONS_DIR}${file}`); 
+        console.info('adding ',file.replace('.svg', ''), `${ICONS_DIR}${file}`); 
         sprites.add(file.replace('.svg', ''), fs.readFileSync(`${ICONS_DIR}${file}`, 'utf8'))
     });
 

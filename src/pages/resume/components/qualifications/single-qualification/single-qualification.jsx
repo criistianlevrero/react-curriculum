@@ -8,9 +8,8 @@ export const SingleQualification = ({ expPoints, name, description}) => {
   const renderStars = () => {
     let starsArray = [];
     for (let i = 0; i < totalStarts; i++) {
-      //classNames([styles.star, i > expPoints - 1 ? styles['starEmpty'] : ''])
       starsArray.push(
-        <span aria-hidden="true" key={i} className={''}></span>
+        <span aria-hidden="true" key={i} className={ i > expPoints - 1 ? styles.starEmpty : styles.star }></span>
       )
       
     }
@@ -19,8 +18,8 @@ export const SingleQualification = ({ expPoints, name, description}) => {
   
 
   return (
-    <div className={styles.qualifications}>
-      <dt className={styles.qualificationName}>
+    <div className={styles.qualification}>
+      <dt className={styles.name}>
         {name}
       </dt>
       <dd>

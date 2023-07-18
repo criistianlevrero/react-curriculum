@@ -158,7 +158,7 @@
         "fontStyle": "normal",
         "fontStretch": "normal",
         "letterSpacing": 0,
-        "lineHeight": 125,
+        "lineHeight": 135,
         "paragraphIndent": 0,
         "paragraphSpacing": 0,
         "textCase": "none"
@@ -170,17 +170,39 @@
         }
       }
     },
+    "hero-secondary": {
+      "type": "custom-fontStyle",
+      "value": {
+        "fontSize": 22.5,
+        "textDecoration": "none",
+        "fontFamily": "Montserrat",
+        "fontWeight": 400,
+        "fontStyle": "italic",
+        "fontStretch": "normal",
+        "letterSpacing": 0,
+        "lineHeight": 40,
+        "paragraphIndent": 0,
+        "paragraphSpacing": 61,
+        "textCase": "none"
+      },
+      "extensions": {
+        "org.lukasoppermann.figmaDesignTokens": {
+          "styleId": "S:daf4df1b675f85801e44ed1ddeb4941ccd1c39a3,",
+          "exportKey": "font"
+        }
+      }
+    },
     "title01": {
       "type": "custom-fontStyle",
       "value": {
-        "fontSize": 30,
+        "fontSize": 37.5,
         "textDecoration": "none",
         "fontFamily": "Raleway",
         "fontWeight": 700,
         "fontStyle": "normal",
         "fontStretch": "normal",
         "letterSpacing": 0,
-        "lineHeight": 36,
+        "lineHeight": 45,
         "paragraphIndent": 0,
         "paragraphSpacing": 0,
         "textCase": "none"
@@ -217,14 +239,14 @@
     "title03": {
       "type": "custom-fontStyle",
       "value": {
-        "fontSize": 20,
+        "fontSize": 30,
         "textDecoration": "none",
         "fontFamily": "Raleway",
         "fontWeight": 600,
         "fontStyle": "normal",
         "fontStretch": "normal",
         "letterSpacing": 0,
-        "lineHeight": 24,
+        "lineHeight": 36,
         "paragraphIndent": 0,
         "paragraphSpacing": 0,
         "textCase": "none"
@@ -236,98 +258,10 @@
         }
       }
     },
-    "body01": {
-      "type": "custom-fontStyle",
-      "value": {
-        "fontSize": 18,
-        "textDecoration": "none",
-        "fontFamily": "Raleway",
-        "fontWeight": 400,
-        "fontStyle": "normal",
-        "fontStretch": "normal",
-        "letterSpacing": 0,
-        "lineHeight": 30,
-        "paragraphIndent": 0,
-        "paragraphSpacing": 20,
-        "textCase": "none"
-      },
-      "extensions": {
-        "org.lukasoppermann.figmaDesignTokens": {
-          "styleId": "S:73ad36b3b6ee46d093e26d7e6b8ea439d069eebf,",
-          "exportKey": "font"
-        }
-      }
-    },
-    "body02": {
-      "type": "custom-fontStyle",
-      "value": {
-        "fontSize": 18,
-        "textDecoration": "none",
-        "fontFamily": "Raleway",
-        "fontWeight": 500,
-        "fontStyle": "normal",
-        "fontStretch": "normal",
-        "letterSpacing": 0,
-        "lineHeight": 30,
-        "paragraphIndent": 0,
-        "paragraphSpacing": 20,
-        "textCase": "none"
-      },
-      "extensions": {
-        "org.lukasoppermann.figmaDesignTokens": {
-          "styleId": "S:660858e7720ba45be5c094c02928bf5f1b2bd081,",
-          "exportKey": "font"
-        }
-      }
-    },
-    "body02-italic": {
-      "type": "custom-fontStyle",
-      "value": {
-        "fontSize": 18,
-        "textDecoration": "none",
-        "fontFamily": "Raleway",
-        "fontWeight": 500,
-        "fontStyle": "italic",
-        "fontStretch": "normal",
-        "letterSpacing": 0,
-        "lineHeight": 30,
-        "paragraphIndent": 0,
-        "paragraphSpacing": 20,
-        "textCase": "none"
-      },
-      "extensions": {
-        "org.lukasoppermann.figmaDesignTokens": {
-          "styleId": "S:f02c759091bbafb1123e2d7be75431813378cd31,",
-          "exportKey": "font"
-        }
-      }
-    },
-    "list": {
-      "type": "custom-fontStyle",
-      "value": {
-        "fontSize": 18,
-        "textDecoration": "none",
-        "fontFamily": "Raleway",
-        "fontWeight": 400,
-        "fontStyle": "italic",
-        "fontStretch": "normal",
-        "letterSpacing": 0,
-        "lineHeight": 20,
-        "paragraphIndent": 0,
-        "paragraphSpacing": 20,
-        "textCase": "none"
-      },
-      "extensions": {
-        "org.lukasoppermann.figmaDesignTokens": {
-          "styleId": "S:dc2f731aa80893ffd810d89b37cc55bae7aee667,",
-          "exportKey": "font"
-        }
-      }
-    },
     "title04": {
       "type": "custom-fontStyle",
       "value": {
-        "fontSize": 20,
+        "fontSize": 22.5,
         "textDecoration": "none",
         "fontFamily": "Raleway",
         "fontWeight": 500,
@@ -346,24 +280,112 @@
         }
       }
     },
-    "hero-secondary": {
+    "body01": {
       "type": "custom-fontStyle",
       "value": {
-        "fontSize": 20,
+        "fontSize": 22.5,
         "textDecoration": "none",
-        "fontFamily": "Montserrat",
+        "fontFamily": "Raleway",
         "fontWeight": 400,
-        "fontStyle": "italic",
+        "fontStyle": "normal",
         "fontStretch": "normal",
         "letterSpacing": 0,
-        "lineHeight": 40,
+        "lineHeight": 45,
         "paragraphIndent": 0,
-        "paragraphSpacing": 61,
+        "paragraphSpacing": 22.5,
         "textCase": "none"
       },
       "extensions": {
         "org.lukasoppermann.figmaDesignTokens": {
-          "styleId": "S:daf4df1b675f85801e44ed1ddeb4941ccd1c39a3,",
+          "styleId": "S:73ad36b3b6ee46d093e26d7e6b8ea439d069eebf,",
+          "exportKey": "font"
+        }
+      }
+    },
+    "body02": {
+      "type": "custom-fontStyle",
+      "value": {
+        "fontSize": 22.5,
+        "textDecoration": "none",
+        "fontFamily": "Raleway",
+        "fontWeight": 500,
+        "fontStyle": "normal",
+        "fontStretch": "normal",
+        "letterSpacing": 0,
+        "lineHeight": 35.5,
+        "paragraphIndent": 0,
+        "paragraphSpacing": 22.5,
+        "textCase": "none"
+      },
+      "extensions": {
+        "org.lukasoppermann.figmaDesignTokens": {
+          "styleId": "S:660858e7720ba45be5c094c02928bf5f1b2bd081,",
+          "exportKey": "font"
+        }
+      }
+    },
+    "body02-italic": {
+      "type": "custom-fontStyle",
+      "value": {
+        "fontSize": 22.5,
+        "textDecoration": "none",
+        "fontFamily": "Raleway",
+        "fontWeight": 500,
+        "fontStyle": "italic",
+        "fontStretch": "normal",
+        "letterSpacing": 0,
+        "lineHeight": 45.5,
+        "paragraphIndent": 0,
+        "paragraphSpacing": 22.5,
+        "textCase": "none"
+      },
+      "extensions": {
+        "org.lukasoppermann.figmaDesignTokens": {
+          "styleId": "S:f02c759091bbafb1123e2d7be75431813378cd31,",
+          "exportKey": "font"
+        }
+      }
+    },
+    "body03": {
+      "type": "custom-fontStyle",
+      "value": {
+        "fontSize": 15,
+        "textDecoration": "none",
+        "fontFamily": "Raleway",
+        "fontWeight": 500,
+        "fontStyle": "normal",
+        "fontStretch": "normal",
+        "letterSpacing": 0,
+        "lineHeight": 30,
+        "paragraphIndent": 0,
+        "paragraphSpacing": 0,
+        "textCase": "none"
+      },
+      "extensions": {
+        "org.lukasoppermann.figmaDesignTokens": {
+          "styleId": "S:903c8c51750d2f2611eea671be47c4aa26aedc5d,",
+          "exportKey": "font"
+        }
+      }
+    },
+    "list": {
+      "type": "custom-fontStyle",
+      "value": {
+        "fontSize": 22.5,
+        "textDecoration": "none",
+        "fontFamily": "Raleway",
+        "fontWeight": 400,
+        "fontStyle": "italic",
+        "fontStretch": "normal",
+        "letterSpacing": 0,
+        "lineHeight": 30,
+        "paragraphIndent": 0,
+        "paragraphSpacing": 22.5,
+        "textCase": "none"
+      },
+      "extensions": {
+        "org.lukasoppermann.figmaDesignTokens": {
+          "styleId": "S:dc2f731aa80893ffd810d89b37cc55bae7aee667,",
           "exportKey": "font"
         }
       }
@@ -384,6 +406,24 @@
       "extensions": {
         "org.lukasoppermann.figmaDesignTokens": {
           "styleId": "S:bfa9dc4d2f4b63889c1d3ce701ed2c504cd62b7d,",
+          "exportKey": "effect"
+        }
+      }
+    },
+    "level4": {
+      "description": null,
+      "type": "custom-shadow",
+      "value": {
+        "shadowType": "dropShadow",
+        "radius": 76,
+        "color": "#784949cf",
+        "offsetX": -20,
+        "offsetY": 0,
+        "spread": 0
+      },
+      "extensions": {
+        "org.lukasoppermann.figmaDesignTokens": {
+          "styleId": "S:d7598e72281b36b8ce76706342c33ae2790fd143,",
           "exportKey": "effect"
         }
       }
@@ -421,7 +461,7 @@
       },
       "lineHeight": {
         "type": "dimension",
-        "value": 125
+        "value": 135
       },
       "paragraphIndent": {
         "type": "dimension",
@@ -436,10 +476,56 @@
         "value": "none"
       }
     },
+    "hero-secondary": {
+      "fontSize": {
+        "type": "dimension",
+        "value": 22.5
+      },
+      "textDecoration": {
+        "type": "string",
+        "value": "none"
+      },
+      "fontFamily": {
+        "type": "string",
+        "value": "Montserrat"
+      },
+      "fontWeight": {
+        "type": "number",
+        "value": 400
+      },
+      "fontStyle": {
+        "type": "string",
+        "value": "italic"
+      },
+      "fontStretch": {
+        "type": "string",
+        "value": "normal"
+      },
+      "letterSpacing": {
+        "type": "dimension",
+        "value": 0
+      },
+      "lineHeight": {
+        "type": "dimension",
+        "value": 40
+      },
+      "paragraphIndent": {
+        "type": "dimension",
+        "value": 0
+      },
+      "paragraphSpacing": {
+        "type": "dimension",
+        "value": 61
+      },
+      "textCase": {
+        "type": "string",
+        "value": "none"
+      }
+    },
     "title01": {
       "fontSize": {
         "type": "dimension",
-        "value": 30
+        "value": 37.5
       },
       "textDecoration": {
         "type": "string",
@@ -467,7 +553,7 @@
       },
       "lineHeight": {
         "type": "dimension",
-        "value": 36
+        "value": 45
       },
       "paragraphIndent": {
         "type": "dimension",
@@ -531,7 +617,7 @@
     "title03": {
       "fontSize": {
         "type": "dimension",
-        "value": 20
+        "value": 30
       },
       "textDecoration": {
         "type": "string",
@@ -559,7 +645,7 @@
       },
       "lineHeight": {
         "type": "dimension",
-        "value": 24
+        "value": 36
       },
       "paragraphIndent": {
         "type": "dimension",
@@ -568,190 +654,6 @@
       "paragraphSpacing": {
         "type": "dimension",
         "value": 0
-      },
-      "textCase": {
-        "type": "string",
-        "value": "none"
-      }
-    },
-    "body01": {
-      "fontSize": {
-        "type": "dimension",
-        "value": 18
-      },
-      "textDecoration": {
-        "type": "string",
-        "value": "none"
-      },
-      "fontFamily": {
-        "type": "string",
-        "value": "Raleway"
-      },
-      "fontWeight": {
-        "type": "number",
-        "value": 400
-      },
-      "fontStyle": {
-        "type": "string",
-        "value": "normal"
-      },
-      "fontStretch": {
-        "type": "string",
-        "value": "normal"
-      },
-      "letterSpacing": {
-        "type": "dimension",
-        "value": 0
-      },
-      "lineHeight": {
-        "type": "dimension",
-        "value": 30
-      },
-      "paragraphIndent": {
-        "type": "dimension",
-        "value": 0
-      },
-      "paragraphSpacing": {
-        "type": "dimension",
-        "value": 20
-      },
-      "textCase": {
-        "type": "string",
-        "value": "none"
-      }
-    },
-    "body02": {
-      "fontSize": {
-        "type": "dimension",
-        "value": 18
-      },
-      "textDecoration": {
-        "type": "string",
-        "value": "none"
-      },
-      "fontFamily": {
-        "type": "string",
-        "value": "Raleway"
-      },
-      "fontWeight": {
-        "type": "number",
-        "value": 500
-      },
-      "fontStyle": {
-        "type": "string",
-        "value": "normal"
-      },
-      "fontStretch": {
-        "type": "string",
-        "value": "normal"
-      },
-      "letterSpacing": {
-        "type": "dimension",
-        "value": 0
-      },
-      "lineHeight": {
-        "type": "dimension",
-        "value": 30
-      },
-      "paragraphIndent": {
-        "type": "dimension",
-        "value": 0
-      },
-      "paragraphSpacing": {
-        "type": "dimension",
-        "value": 20
-      },
-      "textCase": {
-        "type": "string",
-        "value": "none"
-      }
-    },
-    "body02-italic": {
-      "fontSize": {
-        "type": "dimension",
-        "value": 18
-      },
-      "textDecoration": {
-        "type": "string",
-        "value": "none"
-      },
-      "fontFamily": {
-        "type": "string",
-        "value": "Raleway"
-      },
-      "fontWeight": {
-        "type": "number",
-        "value": 500
-      },
-      "fontStyle": {
-        "type": "string",
-        "value": "italic"
-      },
-      "fontStretch": {
-        "type": "string",
-        "value": "normal"
-      },
-      "letterSpacing": {
-        "type": "dimension",
-        "value": 0
-      },
-      "lineHeight": {
-        "type": "dimension",
-        "value": 30
-      },
-      "paragraphIndent": {
-        "type": "dimension",
-        "value": 0
-      },
-      "paragraphSpacing": {
-        "type": "dimension",
-        "value": 20
-      },
-      "textCase": {
-        "type": "string",
-        "value": "none"
-      }
-    },
-    "list": {
-      "fontSize": {
-        "type": "dimension",
-        "value": 18
-      },
-      "textDecoration": {
-        "type": "string",
-        "value": "none"
-      },
-      "fontFamily": {
-        "type": "string",
-        "value": "Raleway"
-      },
-      "fontWeight": {
-        "type": "number",
-        "value": 400
-      },
-      "fontStyle": {
-        "type": "string",
-        "value": "italic"
-      },
-      "fontStretch": {
-        "type": "string",
-        "value": "normal"
-      },
-      "letterSpacing": {
-        "type": "dimension",
-        "value": 0
-      },
-      "lineHeight": {
-        "type": "dimension",
-        "value": 20
-      },
-      "paragraphIndent": {
-        "type": "dimension",
-        "value": 0
-      },
-      "paragraphSpacing": {
-        "type": "dimension",
-        "value": 20
       },
       "textCase": {
         "type": "string",
@@ -761,7 +663,7 @@
     "title04": {
       "fontSize": {
         "type": "dimension",
-        "value": 20
+        "value": 22.5
       },
       "textDecoration": {
         "type": "string",
@@ -804,10 +706,10 @@
         "value": "none"
       }
     },
-    "hero-secondary": {
+    "body01": {
       "fontSize": {
         "type": "dimension",
-        "value": 20
+        "value": 22.5
       },
       "textDecoration": {
         "type": "string",
@@ -815,7 +717,191 @@
       },
       "fontFamily": {
         "type": "string",
-        "value": "Montserrat"
+        "value": "Raleway"
+      },
+      "fontWeight": {
+        "type": "number",
+        "value": 400
+      },
+      "fontStyle": {
+        "type": "string",
+        "value": "normal"
+      },
+      "fontStretch": {
+        "type": "string",
+        "value": "normal"
+      },
+      "letterSpacing": {
+        "type": "dimension",
+        "value": 0
+      },
+      "lineHeight": {
+        "type": "dimension",
+        "value": 45
+      },
+      "paragraphIndent": {
+        "type": "dimension",
+        "value": 0
+      },
+      "paragraphSpacing": {
+        "type": "dimension",
+        "value": 22.5
+      },
+      "textCase": {
+        "type": "string",
+        "value": "none"
+      }
+    },
+    "body02": {
+      "fontSize": {
+        "type": "dimension",
+        "value": 22.5
+      },
+      "textDecoration": {
+        "type": "string",
+        "value": "none"
+      },
+      "fontFamily": {
+        "type": "string",
+        "value": "Raleway"
+      },
+      "fontWeight": {
+        "type": "number",
+        "value": 500
+      },
+      "fontStyle": {
+        "type": "string",
+        "value": "normal"
+      },
+      "fontStretch": {
+        "type": "string",
+        "value": "normal"
+      },
+      "letterSpacing": {
+        "type": "dimension",
+        "value": 0
+      },
+      "lineHeight": {
+        "type": "dimension",
+        "value": 35.5
+      },
+      "paragraphIndent": {
+        "type": "dimension",
+        "value": 0
+      },
+      "paragraphSpacing": {
+        "type": "dimension",
+        "value": 22.5
+      },
+      "textCase": {
+        "type": "string",
+        "value": "none"
+      }
+    },
+    "body02-italic": {
+      "fontSize": {
+        "type": "dimension",
+        "value": 22.5
+      },
+      "textDecoration": {
+        "type": "string",
+        "value": "none"
+      },
+      "fontFamily": {
+        "type": "string",
+        "value": "Raleway"
+      },
+      "fontWeight": {
+        "type": "number",
+        "value": 500
+      },
+      "fontStyle": {
+        "type": "string",
+        "value": "italic"
+      },
+      "fontStretch": {
+        "type": "string",
+        "value": "normal"
+      },
+      "letterSpacing": {
+        "type": "dimension",
+        "value": 0
+      },
+      "lineHeight": {
+        "type": "dimension",
+        "value": 45.5
+      },
+      "paragraphIndent": {
+        "type": "dimension",
+        "value": 0
+      },
+      "paragraphSpacing": {
+        "type": "dimension",
+        "value": 22.5
+      },
+      "textCase": {
+        "type": "string",
+        "value": "none"
+      }
+    },
+    "body03": {
+      "fontSize": {
+        "type": "dimension",
+        "value": 15
+      },
+      "textDecoration": {
+        "type": "string",
+        "value": "none"
+      },
+      "fontFamily": {
+        "type": "string",
+        "value": "Raleway"
+      },
+      "fontWeight": {
+        "type": "number",
+        "value": 500
+      },
+      "fontStyle": {
+        "type": "string",
+        "value": "normal"
+      },
+      "fontStretch": {
+        "type": "string",
+        "value": "normal"
+      },
+      "letterSpacing": {
+        "type": "dimension",
+        "value": 0
+      },
+      "lineHeight": {
+        "type": "dimension",
+        "value": 30
+      },
+      "paragraphIndent": {
+        "type": "dimension",
+        "value": 0
+      },
+      "paragraphSpacing": {
+        "type": "dimension",
+        "value": 0
+      },
+      "textCase": {
+        "type": "string",
+        "value": "none"
+      }
+    },
+    "list": {
+      "fontSize": {
+        "type": "dimension",
+        "value": 22.5
+      },
+      "textDecoration": {
+        "type": "string",
+        "value": "none"
+      },
+      "fontFamily": {
+        "type": "string",
+        "value": "Raleway"
       },
       "fontWeight": {
         "type": "number",
@@ -835,7 +921,7 @@
       },
       "lineHeight": {
         "type": "dimension",
-        "value": 40
+        "value": 30
       },
       "paragraphIndent": {
         "type": "dimension",
@@ -843,7 +929,7 @@
       },
       "paragraphSpacing": {
         "type": "dimension",
-        "value": 61
+        "value": 22.5
       },
       "textCase": {
         "type": "string",

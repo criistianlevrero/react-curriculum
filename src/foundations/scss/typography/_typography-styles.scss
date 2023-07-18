@@ -25,6 +25,17 @@ $typographic-styles: (
   'typography-hero-paragraph-indent': vars.$typography-hero-paragraph-indent,
   'typography-hero-paragraph-spacing': vars.$typography-hero-paragraph-spacing,
   'typography-hero-text-case': vars.$typography-hero-text-case,
+  'typography-hero-secondary-font-size': vars.$typography-hero-secondary-font-size,
+  'typography-hero-secondary-text-decoration': vars.$typography-hero-secondary-text-decoration,
+  'typography-hero-secondary-font-family': vars.$typography-hero-secondary-font-family,
+  'typography-hero-secondary-font-weight': vars.$typography-hero-secondary-font-weight,
+  'typography-hero-secondary-font-style': vars.$typography-hero-secondary-font-style,
+  'typography-hero-secondary-font-stretch': vars.$typography-hero-secondary-font-stretch,
+  'typography-hero-secondary-letter-spacing': vars.$typography-hero-secondary-letter-spacing,
+  'typography-hero-secondary-line-height': vars.$typography-hero-secondary-line-height,
+  'typography-hero-secondary-paragraph-indent': vars.$typography-hero-secondary-paragraph-indent,
+  'typography-hero-secondary-paragraph-spacing': vars.$typography-hero-secondary-paragraph-spacing,
+  'typography-hero-secondary-text-case': vars.$typography-hero-secondary-text-case,
   'typography-title01-font-size': vars.$typography-title01-font-size,
   'typography-title01-text-decoration': vars.$typography-title01-text-decoration,
   'typography-title01-font-family': vars.$typography-title01-font-family,
@@ -58,6 +69,17 @@ $typographic-styles: (
   'typography-title03-paragraph-indent': vars.$typography-title03-paragraph-indent,
   'typography-title03-paragraph-spacing': vars.$typography-title03-paragraph-spacing,
   'typography-title03-text-case': vars.$typography-title03-text-case,
+  'typography-title04-font-size': vars.$typography-title04-font-size,
+  'typography-title04-text-decoration': vars.$typography-title04-text-decoration,
+  'typography-title04-font-family': vars.$typography-title04-font-family,
+  'typography-title04-font-weight': vars.$typography-title04-font-weight,
+  'typography-title04-font-style': vars.$typography-title04-font-style,
+  'typography-title04-font-stretch': vars.$typography-title04-font-stretch,
+  'typography-title04-letter-spacing': vars.$typography-title04-letter-spacing,
+  'typography-title04-line-height': vars.$typography-title04-line-height,
+  'typography-title04-paragraph-indent': vars.$typography-title04-paragraph-indent,
+  'typography-title04-paragraph-spacing': vars.$typography-title04-paragraph-spacing,
+  'typography-title04-text-case': vars.$typography-title04-text-case,
   'typography-body01-font-size': vars.$typography-body01-font-size,
   'typography-body01-text-decoration': vars.$typography-body01-text-decoration,
   'typography-body01-font-family': vars.$typography-body01-font-family,
@@ -91,6 +113,17 @@ $typographic-styles: (
   'typography-body02-italic-paragraph-indent': vars.$typography-body02-italic-paragraph-indent,
   'typography-body02-italic-paragraph-spacing': vars.$typography-body02-italic-paragraph-spacing,
   'typography-body02-italic-text-case': vars.$typography-body02-italic-text-case,
+  'typography-body03-font-size': vars.$typography-body03-font-size,
+  'typography-body03-text-decoration': vars.$typography-body03-text-decoration,
+  'typography-body03-font-family': vars.$typography-body03-font-family,
+  'typography-body03-font-weight': vars.$typography-body03-font-weight,
+  'typography-body03-font-style': vars.$typography-body03-font-style,
+  'typography-body03-font-stretch': vars.$typography-body03-font-stretch,
+  'typography-body03-letter-spacing': vars.$typography-body03-letter-spacing,
+  'typography-body03-line-height': vars.$typography-body03-line-height,
+  'typography-body03-paragraph-indent': vars.$typography-body03-paragraph-indent,
+  'typography-body03-paragraph-spacing': vars.$typography-body03-paragraph-spacing,
+  'typography-body03-text-case': vars.$typography-body03-text-case,
   'typography-list-font-size': vars.$typography-list-font-size,
   'typography-list-text-decoration': vars.$typography-list-text-decoration,
   'typography-list-font-family': vars.$typography-list-font-family,
@@ -101,29 +134,7 @@ $typographic-styles: (
   'typography-list-line-height': vars.$typography-list-line-height,
   'typography-list-paragraph-indent': vars.$typography-list-paragraph-indent,
   'typography-list-paragraph-spacing': vars.$typography-list-paragraph-spacing,
-  'typography-list-text-case': vars.$typography-list-text-case,
-  'typography-title04-font-size': vars.$typography-title04-font-size,
-  'typography-title04-text-decoration': vars.$typography-title04-text-decoration,
-  'typography-title04-font-family': vars.$typography-title04-font-family,
-  'typography-title04-font-weight': vars.$typography-title04-font-weight,
-  'typography-title04-font-style': vars.$typography-title04-font-style,
-  'typography-title04-font-stretch': vars.$typography-title04-font-stretch,
-  'typography-title04-letter-spacing': vars.$typography-title04-letter-spacing,
-  'typography-title04-line-height': vars.$typography-title04-line-height,
-  'typography-title04-paragraph-indent': vars.$typography-title04-paragraph-indent,
-  'typography-title04-paragraph-spacing': vars.$typography-title04-paragraph-spacing,
-  'typography-title04-text-case': vars.$typography-title04-text-case,
-  'typography-hero-secondary-font-size': vars.$typography-hero-secondary-font-size,
-  'typography-hero-secondary-text-decoration': vars.$typography-hero-secondary-text-decoration,
-  'typography-hero-secondary-font-family': vars.$typography-hero-secondary-font-family,
-  'typography-hero-secondary-font-weight': vars.$typography-hero-secondary-font-weight,
-  'typography-hero-secondary-font-style': vars.$typography-hero-secondary-font-style,
-  'typography-hero-secondary-font-stretch': vars.$typography-hero-secondary-font-stretch,
-  'typography-hero-secondary-letter-spacing': vars.$typography-hero-secondary-letter-spacing,
-  'typography-hero-secondary-line-height': vars.$typography-hero-secondary-line-height,
-  'typography-hero-secondary-paragraph-indent': vars.$typography-hero-secondary-paragraph-indent,
-  'typography-hero-secondary-paragraph-spacing': vars.$typography-hero-secondary-paragraph-spacing,
-  'typography-hero-secondary-text-case': vars.$typography-hero-secondary-text-case,
+  'typography-list-text-case': vars.$typography-list-text-case,  
 );
 
 
@@ -136,6 +147,7 @@ $styles:
   body01,
   body02,
   body02-italic,
+  body03,
   list,
   hero-secondary;
 
@@ -147,12 +159,22 @@ $properties:
   font-style,
   font-stretch,
   letter-spacing,
-  line-height;
+  line-height,
+  paragraph-indent,
+  paragraph-spacing,
+  text-case;
+
+
+@mixin typographyFactory($style) {
+  @each $property in $properties {
+    #{$property}: map.get($typographic-styles, 'typography-#{$style}-#{$property}');
+  }
+}
 
 @each $style in $styles {  
   .typography-#{$style} {
-    @each $property in $properties {
-      #{$property}: map.get($typographic-styles, 'typography-#{$style}-#{$property}');
-    }
+    @include typographyFactory($style);
   }
 }
+
+

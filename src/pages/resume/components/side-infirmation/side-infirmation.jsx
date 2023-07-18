@@ -1,15 +1,17 @@
-import React, { useState } from 'react'
-import { PropTypes } from 'prop-types';
-import styles from './resume-aside.module.scss';
+import styles from './side-infirmation.module.scss';
+
 import { Card } from '@components/card/card';
 import { Button } from '@components/button/button';
 
 
-export const ResumeAside = ({ profileImage, year, children}) => {
+export const SideInfirmation = ({ profileImage, mediaLinks}) => {
   
   const onButtonClick = (evt) => {
-    console.log('click', evt)
+    console.info('click', evt)
   }
+
+  const contactList = mediaLinks.items.filter(item => item.iconWithLabel )
+  const socialList = mediaLinks.items.filter(item => !item.iconWithLabel )
 
   return (
     <>
@@ -24,12 +26,14 @@ export const ResumeAside = ({ profileImage, year, children}) => {
         <Card>
           <div className={styles.contactContent}>
             <ul className={styles.contactList}>
-              <li><Button iconName='mail' label='cristianlevrero@gmail.com' showLabel={true} onClick={onButtonClick} /></li>
-              <li><Button iconName='marker' label='Cordoba, Argentina' showLabel={true} href='https://developer.mozilla.org/es/docs/Web/HTML/Element/a' target='_blank' /></li>
+              {contactList.map((link, index)=>
+                <li key={index}><Button iconName={link.iconId} label={link.linkLabel} showLabel={true} onClick={onButtonClick} /></li>
+              )}
             </ul>
             <ul className={styles.contactSocial}>
-              <li><Button iconName='behance' label='behance' onClick={onButtonClick} /></li>
-              <li><Button iconName='instagram' label='instagram' href='https://developer.mozilla.org/es/docs/Web/HTML/Element/a' target='_blank' /></li>
+              {socialList.map((link, index)=>
+                <li key={index}><Button iconName={link.iconId} label={link.linkLabel} showLabel={false} onClick={onButtonClick} /></li>
+              )}
             </ul>
           </div>
         </Card>

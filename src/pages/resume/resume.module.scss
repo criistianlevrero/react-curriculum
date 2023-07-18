@@ -1,13 +1,9 @@
 @use '@foundations/variables/variables' as vars;
 @import '@foundations/typography/typography-styles';
 
-.mainContainer {
-  width: 100%;
-  max-width: 37rem;
-}
-
 .header {
-  margin-top: 9rem;
+  margin: 10rem auto 1rem auto;
+  max-width: 37rem;
 
   &Title {
     @extend .typography-hero;
@@ -17,7 +13,8 @@
   &Description {
     @extend .typography-hero-secondary;
     text-align: center;
-    top: -8rem;
+    top: -10.5rem;
+    height: 0;
     position: relative;
   }
 }

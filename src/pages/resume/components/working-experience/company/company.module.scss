@@ -1,0 +1,14 @@
+@use '@foundations/typography/typography-styles' as typography;
+
+.experience {
+  
+}
+
+.companyName {
+    @include typography.typographyFactory(title03);
+    padding-top: 2rem;
+}
+
+.content {
+
+}

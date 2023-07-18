@@ -64,7 +64,7 @@ const StyleDictionaryExtended = StyleDictionary.extend({
     },
   },
 });
-console.log('StyleDictionaryExtended', StyleDictionaryExtended)
+console.info('StyleDictionaryExtended', StyleDictionaryExtended)
 
 
 StyleDictionaryExtended.buildAllPlatforms()

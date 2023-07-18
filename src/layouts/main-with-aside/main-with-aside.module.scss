@@ -2,13 +2,15 @@
 
 .mainWithAsideLayout {
     display: grid;
-    grid-template-columns: 320px 37rem 320px;
-    grid-column-gap: 20px;
+    grid-template-columns: auto 52rem 320px;
+    grid-column-gap: 4rem;
     width: fit-content;
     margin: 0 auto;
 }
 
 .main {
     background-color: vars.$color-white;
-    padding: 0 2rem;
+    padding: 0 3rem;
+    filter: drop-shadow(-20px 0px 76px rgba(120, 73, 73, 0.81));
+    filter: drop-shadow(vars.$effect-level4); // TODO: fix shadow converter
 }

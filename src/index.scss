@@ -1,19 +1,19 @@
 @use '@foundations/variables/variables' as vars;
-@import '@foundations/typography/typography-styles';
+@use '@foundations/typography/typography-styles' as typography;
 @import '@foundations/general/reset.scss';
 
 
 :root {
-  @extend .typography-body01;
-
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+  font-size: 15px
 }
 
 body {
+  @include typography.typographyFactory(body01);
+  color: vars.$color-black-typography;
   background-color: vars.$color-white;
-  background-color: rgb(168, 141, 141);
 }

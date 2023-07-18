@@ -7,9 +7,17 @@ const query = `{
 			json
 		}
 		location
+		mediaLinksCollection(limit: 100) {
+			items {
+				iconId
+				linkLabel
+				url
+				iconWithLabel
+			}
+		}
 	}
-	qualificationsCollection(limit: 100){
-		items{
+	qualificationsCollection(limit: 100) {
+		items {
 			name
 			description {
 				json
@@ -17,24 +25,25 @@ const query = `{
 			rating
 		}
 	}
-	companyCollection(limit:100 order:startDate_DESC){
-		items{
+	companyCollection(limit: 100, order: startDate_DESC) {
+		items {
 			companyName
 			startDate
 			finishDate
-			linkedFrom{
-				projectCollection(limit:100){
-					items{
+			linkedFrom {
+				projectCollection(limit: 100) {
+					items {
 						year
 						projectName
-						positionDescription{json}
+						positionDescription {
+							json
+						}
 					}
 				}
 			}
 		}
 	}
-}
-`;
+}`;
 export default function fetchData(setpageModel) {
     window.fetch(`https://graphql.contentful.com/content/v1/spaces/h2xj79xdxq5r/`, {
         method: "POST",
@@ -52,7 +61,7 @@ export default function fetchData(setpageModel) {
             console.error(errors);
         }
     
-        console.log(data);
+        //console.log(data); // TODO: check why endpoints has being called several times
         // rerender the entire component with new data
         setpageModel(data);
     });

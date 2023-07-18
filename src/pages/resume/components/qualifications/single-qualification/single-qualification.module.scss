@@ -1,5 +1,16 @@
+@use '@foundations/typography/typography-styles' as typography;
+
+.qualification {
+  width: 7rem
+}
+
+.name{
+  @include typography.typographyFactory(body03);  
+}
+
 .rating {
   display: flex;
+  justify-content: space-between;
 }
   
 .star {
@@ -14,8 +25,4 @@
 .starEmpty {
   @extend .star;
   background: #3e5e67;
-}
-
-.qualification {
-  width: 8rem
 }
