@@ -7,6 +7,7 @@
 
   &Title {
     @extend .typography-hero;
+    color: vars.$color-brand-orange;
     text-align: center;
   }
 

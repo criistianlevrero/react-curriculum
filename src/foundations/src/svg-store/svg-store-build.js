@@ -3,8 +3,8 @@ var fs = require('fs');
 const path = require('path');
 
 const ROOT_DIR = path.join(__dirname, "../../");
-const ICONS_DIR = `${ROOT_DIR}/icons/`
-const ICONS_LIBRARY_DIR = `${ROOT_DIR}/svg-library/_sprites.svg`
+const ICONS_DIR = `${ROOT_DIR}icons/`
+const ICONS_LIBRARY_DIR = `${ROOT_DIR}svg-library/_sprites.svg`
 
 
 

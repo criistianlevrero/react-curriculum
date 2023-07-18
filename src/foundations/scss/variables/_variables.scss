@@ -1,7 +1,10 @@
 
 // Do not edit directly
-// Generated on Mon, 17 Jul 2023 21:42:38 GMT
+// Generated on Tue, 18 Jul 2023 16:20:12 GMT
 
+$breakpoints-lg: 1280px;
+$breakpoints-sm: 768px;
+$breakpoints-md: 1024px;
 $color-black-typography: rgb(43, 43, 43);
 $color-black-iconography: rgb(56, 71, 61);
 $color-buton-hover-gray: rgb(232, 223, 218);
@@ -10,6 +13,7 @@ $color-white: rgb(255, 255, 255);
 $color-brand-orange: rgb(255, 159, 71);
 $color-item-blue: rgb(45, 156, 219);
 $color-item-orange: rgb(242, 153, 74);
+$color-white-warm: rgb(246, 246, 243);
 $gradient-gradient01: linear-gradient(121.67924769980573deg, rgb(239, 177, 177) 0%, rgb(192, 142, 255) 100%);
 $gradient-gradient02: linear-gradient(121.67924769980573deg, rgb(177, 239, 213) 0%, rgb(255, 142, 142) 100%);
 $font-hero: 400 90/135 Cherry Swash;

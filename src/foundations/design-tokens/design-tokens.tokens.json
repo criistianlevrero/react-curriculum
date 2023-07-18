@@ -1,4 +1,36 @@
 {
+  "breakpoints": {
+    "lg": {
+      "description": null,
+      "value": 1280,
+      "type": "dimension",
+      "extensions": {
+        "org.lukasoppermann.figmaDesignTokens": {
+          "exportKey": "breakpoint"
+        }
+      }
+    },
+    "sm": {
+      "description": null,
+      "value": 768,
+      "type": "dimension",
+      "extensions": {
+        "org.lukasoppermann.figmaDesignTokens": {
+          "exportKey": "breakpoint"
+        }
+      }
+    },
+    "md": {
+      "description": null,
+      "value": 1024,
+      "type": "dimension",
+      "extensions": {
+        "org.lukasoppermann.figmaDesignTokens": {
+          "exportKey": "breakpoint"
+        }
+      }
+    }
+  },
   "color": {
     "black-typography": {
       "description": "",
@@ -92,6 +124,18 @@
       "extensions": {
         "org.lukasoppermann.figmaDesignTokens": {
           "styleId": "S:9a809fec560bcec6a0771efae86e8f6108d89563,",
+          "exportKey": "color"
+        }
+      }
+    },
+    "white-warm": {
+      "description": "",
+      "type": "color",
+      "value": "#f6f6f3ff",
+      "blendMode": "normal",
+      "extensions": {
+        "org.lukasoppermann.figmaDesignTokens": {
+          "styleId": "S:4df5268db83d0e65aaccb6a122b097b9dc6043af,",
           "exportKey": "color"
         }
       }

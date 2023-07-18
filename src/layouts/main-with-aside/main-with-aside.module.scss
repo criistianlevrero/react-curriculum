@@ -2,15 +2,38 @@
 
 .mainWithAsideLayout {
     display: grid;
-    grid-template-columns: auto 52rem 320px;
-    grid-column-gap: 4rem;
-    width: fit-content;
+    grid-template-columns: 1fr;
+    gap: 4rem;
+    width: auto;
     margin: 0 auto;
+    max-width: 52rem;
+    
+    @media screen and ( min-width: 1360px ) {
+        grid-template-columns: minmax(0, 360px) minmax(0, 52rem);
+        max-width: 90%;
+    }
+
+    @media screen and ( min-width: 1680px ) {
+        grid-template-columns: auto 52rem 360px;
+        width: fit-content;
+        max-width: none;
+    }
+}
+
+.aside {
+    display: flex;
+    z-index: 1;
+    @media screen and ( min-width: 1360px ) {
+        flex-direction: column;
+    }
 }
 
 .main {
-    background-color: vars.$color-white;
+    background-color: vars.$color-white-warm;
     padding: 0 3rem;
     filter: drop-shadow(-20px 0px 76px rgba(120, 73, 73, 0.81));
     filter: drop-shadow(vars.$effect-level4); // TODO: fix shadow converter
+    margin-bottom: 30rem;
+    padding-bottom: 10rem;
+    border-radius: 0 0 4rem 4rem;
 }

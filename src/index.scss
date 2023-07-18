@@ -15,5 +15,5 @@
 body {
   @include typography.typographyFactory(body01);
   color: vars.$color-black-typography;
-  background-color: vars.$color-white;
+  background-color: vars.$color-gray-warm;
 }

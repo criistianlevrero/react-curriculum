@@ -9,7 +9,7 @@ export default function MainWithAsideLayout({ aside, main }) {
  
   return (
     <div className={styles.mainWithAsideLayout}>
-      <aside>
+      <aside className={styles.aside}>
         {aside}
       </aside>
       <main className={styles.main}>

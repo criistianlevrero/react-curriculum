@@ -5,10 +5,10 @@
   filter: drop-shadow(vars.$effect-level1); // TODO: fix shadow converter
   border-radius: 1.25rem;
   overflow: hidden;
-  background: vars.$color-white;
+  background: vars.$color-white-warm;
 }
 
 .cardWithBorder {
   @extend .card;
-  border: vars.$color-white solid 0.3rem;
+  border: vars.$color-white-warm solid 0.3rem;
 }

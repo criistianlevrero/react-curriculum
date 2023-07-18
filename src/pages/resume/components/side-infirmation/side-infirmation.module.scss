@@ -1,6 +1,9 @@
 .picture {
   width: 18rem;
-  margin: 10rem 0 0 auto;
+
+  @media screen and ( min-width: 1360px ) {
+    margin: 10rem 0 0 auto;
+  }
 
   &Container {
     padding-bottom: 100%;
