@@ -1,6 +1,10 @@
 @use '@foundations/variables/variables' as vars;
 @import '@foundations/typography/typography-styles';
 
+.resumeContainer {
+  position: relative;
+}
+
 .header {
   margin: 10rem auto 1rem auto;
   max-width: 37rem;

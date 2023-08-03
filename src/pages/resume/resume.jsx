@@ -33,7 +33,7 @@ export default function Resume() {
     'https://cristian-test-bucket.s3.us-east-2.amazonaws.com/profile-picture.png';
 
   return (
-    <>
+    <div className={styles.resumeContainer}>
       <LiveBackground></LiveBackground>
       <MainWithAsideLayout
         aside={
@@ -58,6 +58,6 @@ export default function Resume() {
           </>
         }
       />
-    </>
+    </div>
   );
 }

@@ -6,6 +6,7 @@ import { BackgroundPicture } from './helpers/background-picture';
 import image1 from '@assets/live-background/1.jpg'
 import image2 from '@assets/live-background/2.jpg'
 import image3 from '@assets/live-background/5.jpg'
+import image4 from '@assets/live-background/3.jpg'
 
 export const LiveBackground = () => {
 
@@ -21,7 +22,7 @@ export const LiveBackground = () => {
     [100, 0],
     [100, 100],
     [0, 90]
-  ])
+  ], -500)
 
   const bgImage03 = BackgroundPicture(image3, [
     [0, 0],
@@ -30,11 +31,19 @@ export const LiveBackground = () => {
     [0, 100]
   ])
 
+  const bgImage04 = BackgroundPicture(image4, [
+    [0, 20],
+    [100, 0],
+    [100, 100],
+    [0, 100]
+  ], -1500)
+
   return (
     <>
       <Canvas draw={bgImage01.render} resize={bgImage01.resize} className={styles.image1}></Canvas>
       <Canvas draw={bgImage02.render} resize={bgImage02.resize} className={styles.image2}></Canvas>
       <Canvas draw={bgImage03.render} resize={bgImage03.resize} className={styles.image3}></Canvas>
+      <Canvas draw={bgImage04.render} resize={bgImage04.resize} className={styles.image4}></Canvas>
     </>
   )
 }

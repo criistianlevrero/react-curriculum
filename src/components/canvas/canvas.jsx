@@ -4,6 +4,7 @@ const Canvas = props => {
   
   const { draw, resize, ...rest } = props
   const canvasRef = useRef(null)
+  const downScale = 0.8
   
   useEffect(() => {
     const canvas = canvasRef.current
@@ -13,8 +14,10 @@ const Canvas = props => {
     // Resize
     function resizeCanvasToDisplaySize() {
     
-      const { width, height } = canvas.getBoundingClientRect()
-  
+      let { width, height } = canvas.getBoundingClientRect()
+      width *= downScale
+      height *= downScale
+
       if (canvas.width !== width || canvas.height !== height) {
         canvas.width = width
         canvas.height = height

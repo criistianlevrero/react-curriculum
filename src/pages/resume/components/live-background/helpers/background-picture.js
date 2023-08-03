@@ -11,7 +11,7 @@ const lazyScroll = () => {
 }
 
 
-export const BackgroundPicture = (imageSrc, polygon, transformMatrix) => {
+export const BackgroundPicture = (imageSrc, polygon, scrollOffset = 0, transformMatrix) => {
 
     // init
     let imageLoaded = false
@@ -23,9 +23,8 @@ export const BackgroundPicture = (imageSrc, polygon, transformMatrix) => {
 
     if (!transformMatrix) {
         transformMatrix = (matrix, uW, uH, scroll) => matrix
-            .rotate(scroll / 350 * -1)
+            .rotate(scroll / 450 * -1)
             .translate((uW * -8), (uH * -115) + scroll / 5)
-            .scale(1.3)
     }
 
 
@@ -58,7 +57,7 @@ export const BackgroundPicture = (imageSrc, polygon, transformMatrix) => {
         // pattern
         if (imageLoaded) {
             const pat = ctx.createPattern(image, "repeat")
-            pat.setTransform(transformMatrix(matrix, uW, uH, scroll))
+            pat.setTransform(transformMatrix(matrix, uW, uH, scroll + scrollOffset))
             ctx.fillStyle = pat
         } else {
             ctx.fillStyle = "transparent"
