@@ -1,6 +1,7 @@
-import React, { useRef, useEffect } from 'react'
+import { useRef, useEffect } from 'react'
+import { PropTypes } from 'prop-types';
 
-const Canvas = props => {
+export const Canvas = props => {
   
   const { draw, resize, ...rest } = props
   const canvasRef = useRef(null)
@@ -35,7 +36,7 @@ const Canvas = props => {
     // render only in view
     const isOnViweport = () => {
       const rect = canvas.getBoundingClientRect();
-      console.log((window.innerHeight || document.documentElement.clientHeight))
+      // console.log((window.innerHeight || document.documentElement.clientHeight))
       return (
         rect.top >= 0 - canvas.height &&
         rect.left >= 0 - canvas.width &&
@@ -44,7 +45,7 @@ const Canvas = props => {
       );
     }
 
-    console.log('isOnViweport', isOnViweport());
+    // console.log('isOnViweport', isOnViweport());
     
     // AnimationFrame
     let frameCount = 0
@@ -68,4 +69,7 @@ const Canvas = props => {
   return <canvas ref={canvasRef} {...rest}/>
 }
 
-export default Canvas
+Canvas.propTypes = {
+  draw: PropTypes.func,
+  resize: PropTypes.func,
+}

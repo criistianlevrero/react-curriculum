@@ -1,5 +1,7 @@
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import { BLOCKS, MARKS } from '@contentful/rich-text-types';
+import { PropTypes } from 'prop-types';
+
 import styles from './contentful-richtext.module.scss';
 
 
@@ -24,5 +26,10 @@ export const ContentfulRichtext = ({richtext}) => {
         {documentToReactComponents(richtext, options)}
       </>
     )
+  }
+
+  ContentfulRichtext.propTypes = {
+    richtext: PropTypes.object.isRequired,
+    children: PropTypes.object
   }
   

@@ -1,4 +1,4 @@
-import Canvas from '@components/canvas/canvas';
+import { Canvas } from '@components/canvas/canvas';
 import styles from './live-background.module.scss';
 
 import { BackgroundPicture } from './helpers/background-picture';

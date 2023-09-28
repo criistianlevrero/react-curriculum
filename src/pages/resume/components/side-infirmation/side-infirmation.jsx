@@ -1,4 +1,5 @@
 import styles from './side-infirmation.module.scss';
+import { PropTypes } from 'prop-types';
 
 import { Card } from '@components/card/card';
 import { Button } from '@components/button/button';
@@ -42,8 +43,7 @@ export const SideInfirmation = ({ profileImage, mediaLinks}) => {
   )
 }
 
-// Qualifications.propTypes = {
-//   companyName: PropTypes.string.isRequired,
-//   year: PropTypes.string.isRequired,
-//   description: PropTypes.array.isRequired,
-// }
+SideInfirmation.propTypes = {
+  profileImage: PropTypes.string.isRequired,
+  mediaLinks: PropTypes.object,
+}

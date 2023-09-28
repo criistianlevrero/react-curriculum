@@ -46,6 +46,7 @@ export const BackgroundPicture = (imageSrc, polygon, scrollOffset = 0, transform
     }
 
     // render
+    // eslint-disable-next-line no-unused-vars
     const render = (ctx, frameCount) => {
         // Lazy Scroll
         const scroll = lazyScroll()

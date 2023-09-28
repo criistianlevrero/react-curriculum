@@ -1,8 +1,6 @@
-import React from 'react';
+import { PropTypes } from 'prop-types';
 
 import styles from './main-with-aside.module.scss';
-//var classNames = require('classnames');
-
 
 export default function MainWithAsideLayout({ aside, main }) {
 
@@ -17,4 +15,15 @@ export default function MainWithAsideLayout({ aside, main }) {
       </main>
     </div>
   );
+}
+
+MainWithAsideLayout.propTypes = {
+  aside: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node
+  ]).isRequired,
+  main: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node
+  ]).isRequired,
 }

@@ -1,4 +1,3 @@
-import React, { useState } from 'react'
 import { PropTypes } from 'prop-types';
 import styles from './project.module.scss';
 
@@ -18,8 +17,11 @@ export const Project = ({ projectName, year, children}) => {
   )
 }
 
-// Qualifications.propTypes = {
-//   companyName: PropTypes.string.isRequired,
-//   year: PropTypes.string.isRequired,
-//   description: PropTypes.array.isRequired,
-// }
+Project.propTypes = {
+  projectName: PropTypes.string.isRequired,
+  year: PropTypes.number.isRequired,
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node
+  ]).isRequired,
+}

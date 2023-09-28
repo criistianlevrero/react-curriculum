@@ -1,7 +1,7 @@
 import { PropTypes } from 'prop-types';
 import styles from './single-qualification.module.scss';
 
-export const SingleQualification = ({ expPoints, name, description}) => {
+export const SingleQualification = ({ expPoints, name}) => {
 
   const totalStarts = 5;
 
@@ -34,5 +34,4 @@ export const SingleQualification = ({ expPoints, name, description}) => {
 SingleQualification.propTypes = {
   name: PropTypes.string.isRequired,
   expPoints: PropTypes.number.isRequired,
-  description: PropTypes.array.isRequired,
 }

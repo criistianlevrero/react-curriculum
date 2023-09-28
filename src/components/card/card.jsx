@@ -1,5 +1,6 @@
-import styles from './card.module.scss';
+import { PropTypes } from 'prop-types';
 
+import styles from './card.module.scss';
 
 export const Card = ({children, borders = false}) => {
 
@@ -8,4 +9,12 @@ export const Card = ({children, borders = false}) => {
       {children}
     </div>
   )
+}
+
+Card.propTypes = {
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node
+  ]).isRequired,
+  borders: PropTypes.bool,
 }

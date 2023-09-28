@@ -8,6 +8,7 @@ module.exports = {
     })
   },
   undo: function (dictionary, config) {
+    // eslint-disable-next-line no-unused-vars
     config.options.copyFilesAction.forEach(({ destination, origin }) => {
       console.info(`Cleaning ${destination}`)
       fs.removeSync(destination)

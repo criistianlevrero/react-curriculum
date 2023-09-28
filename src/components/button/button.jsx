@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 import { Icon } from '@components/icon/icon';
 import styles from './button.module.scss';
 
@@ -20,4 +22,13 @@ export const Button = ({ iconName = '', label = '', showLabel = false, onClick =
             { showLabel ? label : '' }
         </button>
     )
+}
+
+Button.propTypes = {
+    iconName: PropTypes.string,
+    label: PropTypes.string,
+    showLabel: PropTypes.bool,
+    onClick: PropTypes.func,
+    href: PropTypes.string,
+    target: PropTypes.string,
 }

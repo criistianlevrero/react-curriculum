@@ -19,3 +19,7 @@ export const Qualifications = ({ dataModel }) => {
     </>
   )
 }
+
+Qualifications.propTypes = {
+  dataModel: PropTypes.array.isRequired,
+}

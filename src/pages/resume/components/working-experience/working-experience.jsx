@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 import { Project } from './project/project';
 import { Company } from './company/company';
 
@@ -19,4 +21,8 @@ export const WorkingExperience = ({ dataModel }) => {
             ))}
         </>
     )
+}
+
+WorkingExperience.propTypes = {
+    dataModel: PropTypes.array.isRequired
 }

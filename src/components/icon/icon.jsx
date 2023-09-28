@@ -1,3 +1,4 @@
+import { PropTypes } from 'prop-types';
 import svgLibrary from '@svg-library'
 
 export const Icon = ({ name, width = 'auto', height = 'auto' }) => {
@@ -7,3 +8,9 @@ export const Icon = ({ name, width = 'auto', height = 'auto' }) => {
         </svg>
     )
 }
+
+Icon.propTypes = {
+    name: PropTypes.string.isRequired,
+    width: PropTypes.string,
+    height: PropTypes.string,
+  }
