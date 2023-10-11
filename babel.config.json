@@ -1,0 +1,33 @@
+{
+    "presets": [
+        "@babel/preset-env",
+        "@babel/preset-typescript",
+        "@babel/preset-react"
+    ],
+    "plugins": [
+        [
+            "@babel/plugin-transform-react-jsx",
+            {
+                "runtime": "automatic"
+            }
+        ],
+        [
+            "module-resolver",
+            {
+                "root": [
+                    "./src"
+                ],
+                "alias": {
+                    
+                    "@assets": "./src/assets",
+                    "@svg-library": "./src/foundations/svg-library/_sprites.svg",
+                    "@components": "./src/components",
+                    "@foundations": "./src/foundations/scss",
+                    "@layouts": "./src/layouts",
+                    "@pages": "./src/pages",
+                    "@services": "./src/services"
+                }
+            }
+        ]
+    ]
+}
