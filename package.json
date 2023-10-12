@@ -9,7 +9,7 @@
     "lint": "eslint src --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --watch",
-    "test-coverage": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage"
+    "test:coverage": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage"
   },
   "dependencies": {
     "@contentful/rich-text-react-renderer": "^15.17.0",

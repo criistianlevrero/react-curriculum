@@ -28,12 +28,12 @@ export const SideInfirmation = ({ profileImage, mediaLinks}) => {
           <div className={styles.contactContent}>
             <ul className={styles.contactList}>
               {contactList.map((link, index)=>
-                <li key={index}><Button iconName={link.iconId} label={link.linkLabel} showLabel={true} onClick={onButtonClick} /></li>
+                <li key={index}><Button iconName={link.iconId} href={link.url} showLabel={true} onClick={onButtonClick}>{ link.linkLabel }</Button></li>
               )}
             </ul>
             <ul className={styles.contactSocial}>
               {socialList.map((link, index)=>
-                <li key={index}><Button iconName={link.iconId} label={link.linkLabel} showLabel={false} onClick={onButtonClick} /></li>
+                <li key={index}><Button iconName={link.iconId} showLabel={false} onClick={onButtonClick}>{ link.linkLabel }</Button></li>
               )}
             </ul>
           </div>
