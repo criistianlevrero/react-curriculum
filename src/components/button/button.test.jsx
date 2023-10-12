@@ -79,14 +79,14 @@ describe('Button component', () => {
 
   describe('target', () => {
 
-    test('target _blank', () => {
-      const { button } = buttonFixture({ href: 'https://example.com', target: '_blank' })
+    test('target default', () => {
+      const { button } = buttonFixture({ href: 'https://example.com' })
       expect(button).toBeInTheDocument()
       expect(screen.getByRole('link')).toHaveAttribute('target', '_blank')
     })
 
-    test('target default', () => {
-      const { button } = buttonFixture({ href: 'https://example.com' })
+    test('target custom _blank', () => {
+      const { button } = buttonFixture({ href: 'https://example.com', target: '_self' })
       expect(button).toBeInTheDocument()
       expect(screen.getByRole('link')).toHaveAttribute('target', '_self')
     })

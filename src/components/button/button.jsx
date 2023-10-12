@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Icon } from '@components/icon/icon';
 import styles from './button.module.scss';
 
-export const Button = ({children, iconName = '', showLabel = false, onClick = () => {}, href='', target='_self' }) => {
+export const Button = ({children, iconName = '', showLabel = false, onClick = () => {}, href='', target='_blank' }) => {
     
     const iconSize = '2rem'
     const Element = href ? 'a' : 'button';
