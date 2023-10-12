@@ -6,10 +6,6 @@ import { Button } from '@components/button/button';
 
 
 export const SideInfirmation = ({ profileImage, mediaLinks}) => {
-  
-  const onButtonClick = (evt) => {
-    console.info('click', evt)
-  }
 
   const contactList = mediaLinks.items.filter(item => item.iconWithLabel )
   const socialList = mediaLinks.items.filter(item => !item.iconWithLabel )
@@ -28,12 +24,12 @@ export const SideInfirmation = ({ profileImage, mediaLinks}) => {
           <div className={styles.contactContent}>
             <ul className={styles.contactList}>
               {contactList.map((link, index)=>
-                <li key={index}><Button iconName={link.iconId} label={link.linkLabel} showLabel={true} onClick={onButtonClick} /></li>
+                <li key={index}><Button iconName={link.iconId} href={link.url} showLabel={true}>{ link.linkLabel }</Button></li>
               )}
             </ul>
             <ul className={styles.contactSocial}>
               {socialList.map((link, index)=>
-                <li key={index}><Button iconName={link.iconId} label={link.linkLabel} showLabel={false} onClick={onButtonClick} /></li>
+                <li key={index}><Button iconName={link.iconId} href={link.url} showLabel={false}>{ link.linkLabel }</Button></li>
               )}
             </ul>
           </div>
