@@ -66,7 +66,7 @@ export const Canvas = props => {
     }
   }, [draw, resize])
   
-  return <canvas ref={canvasRef} {...rest}/>
+  return <canvas data-testid="canvas" ref={canvasRef} {...rest}/>
 }
 
 Canvas.propTypes = {

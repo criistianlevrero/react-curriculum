@@ -2,10 +2,10 @@ import { PropTypes } from 'prop-types';
 
 import styles from './card.module.scss';
 
-export const Card = ({children, borders = false}) => {
+export const Card = ({children, border = false}) => {
 
   return (
-    <div className={styles[borders ? 'cardWithBorder' : 'card']}>
+    <div data-testid='card' className={styles[border ? 'cardWithBorder' : 'card']}>
       {children}
     </div>
   )
@@ -16,5 +16,5 @@ Card.propTypes = {
     PropTypes.arrayOf(PropTypes.node),
     PropTypes.node
   ]).isRequired,
-  borders: PropTypes.bool,
+  border: PropTypes.bool,
 }

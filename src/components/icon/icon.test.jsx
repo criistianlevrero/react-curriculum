@@ -20,7 +20,7 @@ const iconFixture = (props = {}) => {
 describe('Icon', () => {
 
     test('renders an SVG element with the correct name', () => {
-        const { icon } = iconFixture({ name: 'search', width: '20px', height: '20px' });
+        const { icon } = iconFixture({ name: 'search' });
         expect(icon).toBeInTheDocument();
         const useElement = icon.querySelector('use');
         expect(useElement).toBeInTheDocument();

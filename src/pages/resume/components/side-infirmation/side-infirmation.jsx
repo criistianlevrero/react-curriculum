@@ -13,7 +13,7 @@ export const SideInfirmation = ({ profileImage, mediaLinks}) => {
   return (
     <>
       <div className={styles.picture}>
-        <Card borders={true}>
+        <Card border={true}>
           <div className={styles.pictureContainer}>
             <img src={profileImage} className={styles.pictureImg} alt="una bella foto" />
           </div>

@@ -4,15 +4,13 @@ import { render, screen, fireEvent } from '@testing-library/react'
 import { Button } from './button'
 
 const buttonFixture = (props = {}) => {
-  const onClick = jest.fn()
-  const { getByRole } = render(<Button {...props} onClick={onClick} >{ props.children }</Button>)
+  const { getByRole } = render(<Button {...props} >{ props.children }</Button>)
   const button = getByRole( props.href ? 'link' : 'button')
   return {
     button,
     click: () => {
       fireEvent.click(button)
     },
-    onClick,
     getByText: (text) => {
       return screen.getByText(text)
     },
@@ -65,15 +63,17 @@ describe('Button component', () => {
   })
 
   test('onClick event', () => {
-    const { button, click, onClick } = buttonFixture()
+    const onClick = jest.fn()
+    const { button, click } = buttonFixture({onClick})
     expect(button).toBeInTheDocument()
     click()
     expect(onClick).toHaveBeenCalled()
   })
 
   test('href', () => {
-    const { button } = buttonFixture({ href: 'https://example.com' })
+    const { button, click } = buttonFixture({ href: 'https://example.com' })
     expect(button).toBeInTheDocument()
+    click()
     expect(screen.getByRole('link')).toHaveAttribute('href', 'https://example.com')
   })
 
