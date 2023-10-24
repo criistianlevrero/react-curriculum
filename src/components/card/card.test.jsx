@@ -6,7 +6,6 @@ import { Card } from './card';
 const cardFixture = (props = {}) => {
     const defaultProps = {
         children: 'Test Content',
-        border: true,
         ...props,
     };
     const { getByTestId } = render(<Card {...defaultProps} >{ defaultProps.children }</Card>)
@@ -28,7 +27,7 @@ describe('Card', () => {
     });
 
     test('renders the card with a border when the `border` prop is true', () => {
-        const { card } = cardFixture();
+        const { card } = cardFixture({ border: true });
         expect(card).toHaveAttribute('class', 'cardWithBorder')
     });
 
