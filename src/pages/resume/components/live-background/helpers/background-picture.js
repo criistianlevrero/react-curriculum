@@ -11,7 +11,7 @@ const lazyScroll = () => {
 }
 
 
-export const BackgroundPicture = (imageSrc, polygon, scrollOffset = 0, transformMatrix) => {
+export const BackgroundPicture = ({imageSrc, polygon, scrollOffset = 0, transformMatrix, gradientColors = ['#7CE4B8','#FF4343'], lowerGradientPoly, upperGradientPoly}) => {
 
     // init
     let imageLoaded = false
@@ -47,7 +47,7 @@ export const BackgroundPicture = (imageSrc, polygon, scrollOffset = 0, transform
 
     // render
     // eslint-disable-next-line no-unused-vars
-    const render = (ctx, frameCount) => {
+    const render = (ctx, timestamp) => {
         // Lazy Scroll
         const scroll = lazyScroll()
 
@@ -66,7 +66,19 @@ export const BackgroundPicture = (imageSrc, polygon, scrollOffset = 0, transform
 
         // poly
         drawPolygon(ctx, polygon)
+
+        /* gradient */
+        const gradientBackground = ctx.createLinearGradient(0, 0, ctx.canvas.width, ctx.canvas.height);
+        gradientColors.forEach((color, i) => gradientBackground.addColorStop(i, color))
+        ctx.fillStyle = gradientBackground;
+        
+        if (lowerGradientPoly) drawPolygon(ctx, lowerGradientPoly)
+        if (upperGradientPoly) drawPolygon(ctx, upperGradientPoly)
+       
     }
+
+    
+
 
     return { render, resize }
 }
