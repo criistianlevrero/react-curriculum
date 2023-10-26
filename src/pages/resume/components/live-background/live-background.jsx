@@ -10,33 +10,88 @@ import image4 from '@assets/live-background/3.jpg'
 
 export const LiveBackground = () => {
 
-  const bgImage01 = BackgroundPicture(image1, [
-    [0, 0],
-    [100, 0],
-    [100, 70],
-    [0, 90]
-  ])
+  const bgImage01 = BackgroundPicture({
+    imageSrc: image1,
+    gradientColors: ['#F0B1B1', '#C18FFE'],
+    polygon: [
+      [0, 0],
+      [100, 0],
+      [100, 69],
+      [0, 89]
+    ],
+    lowerGradientPoly:[
+      [0, 87],
+      [100, 60],
+      [100, 70],
+      [0, 90]
+    ]
+  })
 
-  const bgImage02 = BackgroundPicture(image2, [
-    [0, 20],
-    [100, 0],
-    [100, 100],
-    [0, 90]
-  ], -500)
+  const bgImage02 = BackgroundPicture({
+    imageSrc: image2,
+    gradientColors: ['#B1F0D5', '#FE9190'],
+    polygon: [
+      [0, 21],
+      [100, 1],
+      [100, 99],
+      [0, 89]
+    ],
+    lowerGradientPoly:[
+      [0, 87],
+      [100, 90],
+      [100, 100],
+      [0, 90]
+    ],
+    upperGradientPoly:[
+      [0, 20],
+      [100, 0],
+      [100, 10],
+      [0, 23]
+    ],
+    scrollOffset: -1800
+  })
 
-  const bgImage03 = BackgroundPicture(image3, [
-    [0, 0],
-    [100, 20],
-    [100, 90],
-    [0, 100]
-  ])
+  const bgImage03 = BackgroundPicture({
+    imageSrc: image3,
+    gradientColors: ['#F0B1B1', '#C08FFF'],
+    polygon: [
+      [0, 1],
+      [100, 21],
+      [100, 89],
+      [0, 99]
+    ],
+    lowerGradientPoly:[
+      [0, 91],
+      [100, 87],
+      [100, 90],
+      [0, 100]
+    ],
+    upperGradientPoly:[
+      [0, 0],
+      [100, 20],
+      [100, 23],
+      [0, 8]
+    ],
+    scrollOffset: -50
+  })
 
-  const bgImage04 = BackgroundPicture(image4, [
-    [0, 20],
-    [100, 0],
-    [100, 100],
-    [0, 100]
-  ], -1500)
+  const bgImage04 = BackgroundPicture({
+    imageSrc: image4,
+    gradientColors: ['#F0B1B1', '#C18FFE'],
+    polygon: [
+      [0, 21],
+      [100, 1],
+      [100, 100],
+      [0, 100]
+    ],
+    upperGradientPoly:[
+      [0, 20],
+      [100, 0],
+      [100, 7],
+      [0, 23]
+    ],
+    scrollOffset: -2500
+  })
 
   return (
     <>

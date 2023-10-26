@@ -1,14 +1,16 @@
 import { useRef, useEffect } from 'react'
 import { PropTypes } from 'prop-types';
 
-export const Canvas = ({ draw, resize, ...rest }) => {
+export const Canvas = props => {
+  
+  const { draw, resize, ...rest } = props
   const canvasRef = useRef(null)
   const downScale = 0.8
   const viewBoundaryRatio= 1.8
   
   useEffect(() => {
     const canvas = canvasRef.current
-    const context = canvas.getContext('2d')
+    const context = canvas.getContext('2d', { alpha: false })
     let canvasSize = {}
 
     // Resize
@@ -24,10 +26,11 @@ export const Canvas = ({ draw, resize, ...rest }) => {
       }
       console.log('resize')
       canvasSize = {width, height}
-      resize(canvasSize)
     }
 
     resizeCanvasToDisplaySize()
+
+    resize(canvasSize)
 
     window.addEventListener('resize', resizeCanvasToDisplaySize);
 
@@ -43,21 +46,20 @@ export const Canvas = ({ draw, resize, ...rest }) => {
     }
     
     // AnimationFrame
-    let lastRenderTime = 0
+    let frameCount = 0
+    let animationFrameId
     
-    const render = (timestamp) => {
-      if (timestamp - lastRenderTime > 16) {
-        lastRenderTime = timestamp
-        if (isOnViweport()) {
-          draw(context, timestamp)
-        }
+    const render = () => {
+      frameCount++
+      if (isOnViweport()) {
+        draw(context, frameCount)
       }
-      window.requestAnimationFrame(render)
+      animationFrameId = window.requestAnimationFrame(render)
     }
     render()
     
     return () => {
-      window.cancelAnimationFrame(render)
+      window.cancelAnimationFrame(animationFrameId)
       window.removeEventListener('resize', resizeCanvasToDisplaySize);
     }
   }, [draw, resize])
