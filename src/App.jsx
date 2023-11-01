@@ -1,4 +1,4 @@
-import Resume from './pages/resume/resume';
+import { Resume } from './pages/resume/resume';
 
 export default function App() {
   

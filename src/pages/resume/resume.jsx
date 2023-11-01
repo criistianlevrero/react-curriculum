@@ -8,13 +8,14 @@ import { ContentfulRichtext } from '@components/contentful-richtext/contentful-r
 import { SideInfirmation } from './components/side-infirmation/side-infirmation';
 import { Qualifications } from './components/qualifications/qualifications'
 import { WorkingExperience } from './components/working-experience/working-experience';
+import { LiveBackground } from "./components/live-background/live-background";
+import { ResumeHeader } from "./components/resume-header/resume-header";
 
 import fetchData from '@services/api'
 
 import styles from './resume.module.scss'
-import { LiveBackground } from "./components/live-background/live-background";
 
-export default function Resume() {
+export const Resume = () => {
 
   const [pageModel, setpageModel] = useState(null);
 
@@ -42,10 +43,7 @@ export default function Resume() {
   
         main={
           <>
-            <header className={styles.header} >
-              <h1 className={styles.headerTitle}>{pageModel.personalData.name}</h1>
-              <p className={styles.headerDescription}>{pageModel.personalData.subheading}</p>
-            </header>
+            <ResumeHeader name={pageModel.personalData.name} subheading={pageModel.personalData.subheadin}></ResumeHeader>
             <SectionWithTitle title='Profile'>
               <ContentfulRichtext richtext={pageModel.personalData.profile.json} />
             </SectionWithTitle>
