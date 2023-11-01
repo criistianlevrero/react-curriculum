@@ -1,0 +1,21 @@
+@use '@foundations/variables/variables' as vars;
+@import '@foundations/typography/typography-styles';
+
+.header {
+    margin: 10rem auto 1rem auto;
+    max-width: 37rem;
+
+    &Title {
+        @extend .typography-hero;
+        color: vars.$color-brand-orange;
+        text-align: center;
+    }
+
+    &Description {
+        @extend .typography-hero-secondary;
+        text-align: center;
+        top: -10.5rem;
+        height: 0;
+        position: relative;
+    }
+}
