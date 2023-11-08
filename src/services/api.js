@@ -31,7 +31,7 @@ const query = `{
 			startDate
 			finishDate
 			linkedFrom {
-				projectCollection(limit: 100) {
+				projectCollection(limit: 100, order: year_DESC) {
 					items {
 						year
 						projectName
