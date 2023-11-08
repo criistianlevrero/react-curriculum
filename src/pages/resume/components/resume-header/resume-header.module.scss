@@ -1,8 +1,12 @@
 @use '@foundations/variables/variables' as vars;
+@use '@foundations/general/media-queries' as media;
 @import '@foundations/typography/typography-styles';
 
 .header {
-    margin: 10rem auto 1rem auto;
+    margin: 2rem auto 1rem auto;
+    @include media.min(vars.$breakpoints-tablet) {
+        margin: 10rem auto 1rem auto;
+    }
     max-width: 37rem;
 
     &Title {

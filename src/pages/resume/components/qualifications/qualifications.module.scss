@@ -1,7 +1,13 @@
+@use '@foundations/variables/variables' as vars;
+@use '@foundations/general/media-queries' as media;
+
 .qualifications{
+  grid-template-columns: repeat(3, auto);
   display: grid;
-  grid-template-columns: repeat(4, auto);
   gap: 1.5rem;
   justify-content: space-between;
   margin-top: 3rem;
+  @include media.min(vars.$breakpoints-tablet) {
+    grid-template-columns: repeat(4, auto);
+  }
 }

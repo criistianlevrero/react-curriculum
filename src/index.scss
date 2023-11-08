@@ -1,5 +1,6 @@
 @use '@foundations/variables/variables' as vars;
 @use '@foundations/typography/typography-styles' as typography;
+@use '@foundations/general/media-queries' as media;
 @import '@foundations/general/reset.scss';
 
 
@@ -9,11 +10,17 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
-  font-size: 15px
+  font-size: 12px;
+  @include media.min(vars.$breakpoints-tablet) {
+    font-size: 15px
+  }
 }
 
 body {
   @include typography.typographyFactory(body01);
   color: vars.$color-black-typography;
-  background-color: vars.$color-gray-warm;
+  background-color: vars.$color-white-warm;
+  @include media.min(vars.$breakpoints-tablet) {
+    background-color: vars.$color-gray-warm;
+  }
 }

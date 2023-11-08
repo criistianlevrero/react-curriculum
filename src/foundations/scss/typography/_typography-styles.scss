@@ -1,3 +1,4 @@
+@use "sass:math";
 @use "sass:map";
 @use 'font-faces';
 @use './../variables/variables' as vars;
@@ -164,10 +165,17 @@ $properties:
   paragraph-spacing,
   text-case;
 
+$base-font-size: 15px;
 
 @mixin typographyFactory($style) {
   @each $property in $properties {
-    #{$property}: map.get($typographic-styles, 'typography-#{$style}-#{$property}');
+    $value: map.get($typographic-styles, 'typography-#{$style}-#{$property}');
+    @if $property == 'font-size' {
+      #{$property}: math.div($value, $base-font-size) * 1rem;
+    }
+    @else {
+      #{$property}: $value;
+    }
   }
 }
 

@@ -1,7 +1,15 @@
-.picture {
-  width: 18rem;
+@use '@foundations/variables/variables' as vars;
+@use '@foundations/general/media-queries' as media;
 
-  @media screen and ( min-width: 1360px ) {
+.picture {
+  max-width:24rem;
+  
+  @include media.min(vars.$breakpoints-tablet) {
+    max-width: 18rem;
+  }
+  
+  @include media.min(vars.$breakpoints-small) {
+    max-width: 18rem;
     margin: 10rem 0 0 auto;
   }
 
@@ -14,7 +22,6 @@
     width: 100%;
     height: auto;
     position: relative;
-    top: -50px;
   }
 }
 
@@ -26,7 +33,12 @@
 }
 
 .contact {
-  margin-top: 4rem;
+  @include media.min(vars.$breakpoints-tablet) {
+    margin-top: 3rem;
+  }
+  @include media.min(vars.$breakpoints-small) {
+    margin-top: 4rem;
+  }
   &Content {
     padding: 1.5rem;
   }

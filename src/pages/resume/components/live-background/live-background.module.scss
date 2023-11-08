@@ -1,7 +1,14 @@
+@use '@foundations/variables/variables' as vars;
+@use '@foundations/general/media-queries' as media;
+
 .canvas {
     position: absolute;
     width: 100%;
-    height: 55rem;
+    height: 65rem;
+    display: none;
+    @include media.min(vars.$breakpoints-tablet) {
+        display: block;
+    }
 }
 
 .image1{

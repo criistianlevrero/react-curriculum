@@ -1,0 +1,9 @@
+@use '@foundations/variables/variables' as vars;
+@use '@foundations/general/media-queries' as media;
+
+ul {
+    padding-left: 1rem;
+    @include media.min(vars.$breakpoints-tablet) {  
+        padding-left: 2rem;
+    } 
+}

@@ -1,19 +1,23 @@
 @use '@foundations/variables/variables' as vars;
+@use '@foundations/general/media-queries' as media;
 
 .mainWithAsideLayout {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 4rem;
     width: auto;
     margin: 0 auto;
     max-width: 52rem;
+    @include media.min(vars.$breakpoints-tablet) {
+        gap: 2rem;
+    }
     
-    @media screen and ( min-width: 1360px ) {
+    @include media.min(vars.$breakpoints-small) {
         grid-template-columns: minmax(0, 360px) minmax(0, 52rem);
         max-width: 90%;
+        gap: 4rem;
     }
 
-    @media screen and ( min-width: 1680px ) {
+    @include media.min(vars.$breakpoints-medium) {
         grid-template-columns: auto 52rem 360px;
         width: fit-content;
         max-width: none;
@@ -21,9 +25,31 @@
 }
 
 .aside {
+    gap: 2em;
+    justify-content: center;
+    padding: 1rem;
+    position: relative;
     display: flex;
     z-index: 1;
-    @media screen and ( min-width: 1360px ) {
+    flex-direction: column;
+    margin-top: 3rem;
+    align-items: center;
+
+    @include media.min(499px) {
+        gap: 1em;
+        flex-direction: row;
+        align-items:initial;
+    }
+
+    @include media.min(vars.$breakpoints-tablet) {
+        margin-top: 1rem;
+    }
+    
+    @include media.min(vars.$breakpoints-small) {
+        margin-top: 0;
+        gap: 0;
+        justify-content: flex-start;
+        padding: 0;
         flex-direction: column;
     }
 }
@@ -31,9 +57,14 @@
 .main {
     background-color: vars.$color-white-warm;
     padding: 0 3rem;
-    filter: drop-shadow(-20px 0px 76px rgba(120, 73, 73, 0.81));
-    filter: drop-shadow(vars.$effect-level4); // TODO: fix shadow converter
-    margin-bottom: 20rem;
     padding-bottom: 10rem;
-    border-radius: 0 0 4rem 4rem;
+    @include media.min(vars.$breakpoints-tablet) {
+        filter: drop-shadow(-20px 0px 76px rgba(120, 73, 73, 0.81));
+        filter: drop-shadow(vars.$effect-level4); // TODO: fix shadow converter
+        margin-bottom: 20rem;
+        border-radius: 4rem;
+    }
+    @include media.min(vars.$breakpoints-small) {
+        border-radius: 0 0 4rem 4rem;
+    }
 }
