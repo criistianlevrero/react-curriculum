@@ -1,8 +1,8 @@
 {
   "breakpoints": {
-    "lg": {
+    "mobile": {
       "description": null,
-      "value": 1280,
+      "value": 375,
       "type": "dimension",
       "extensions": {
         "org.lukasoppermann.figmaDesignTokens": {
@@ -10,9 +10,9 @@
         }
       }
     },
-    "sm": {
+    "tablet": {
       "description": null,
-      "value": 768,
+      "value": 777,
       "type": "dimension",
       "extensions": {
         "org.lukasoppermann.figmaDesignTokens": {
@@ -20,9 +20,19 @@
         }
       }
     },
-    "md": {
+    "small": {
       "description": null,
-      "value": 1024,
+      "value": 1360,
+      "type": "dimension",
+      "extensions": {
+        "org.lukasoppermann.figmaDesignTokens": {
+          "exportKey": "breakpoint"
+        }
+      }
+    },
+    "medium": {
+      "description": null,
+      "value": 1680,
       "type": "dimension",
       "extensions": {
         "org.lukasoppermann.figmaDesignTokens": {

@@ -15,6 +15,8 @@ import fetchData from '@services/api'
 
 import styles from './resume.module.scss'
 
+import profileImage from '@assets/profile.webp'
+
 export const Resume = () => {
 
   const [pageModel, setpageModel] = useState(null);
@@ -29,9 +31,6 @@ export const Resume = () => {
       <LoadingScreen></LoadingScreen>
     );
   }
-
-  const profileImage =
-    'https://cristian-test-bucket.s3.us-east-2.amazonaws.com/profile-picture.png';
 
   return (
     <div className={styles.resumeContainer}>

@@ -3,15 +3,15 @@ import styles from './live-background.module.scss';
 
 import { BackgroundPicture } from './helpers/background-picture';
 
-import image1 from '@assets/live-background/1.jpg'
-import image2 from '@assets/live-background/2.jpg'
-import image3 from '@assets/live-background/5.jpg'
-import image4 from '@assets/live-background/3.jpg'
+import image4 from '@assets/live-background/4.webp'
+import image6 from '@assets/live-background/6.webp'
+import image14 from '@assets/live-background/14.webp'
+import image23 from '@assets/live-background/23.webp'
 
 export const LiveBackground = () => {
 
   const bgImage01 = BackgroundPicture({
-    imageSrc: image1,
+    imageSrc: image23, 
     gradientColors: ['#F0B1B1', '#C18FFE'],
     polygon: [
       [0, 0],
@@ -28,7 +28,7 @@ export const LiveBackground = () => {
   })
 
   const bgImage02 = BackgroundPicture({
-    imageSrc: image2,
+    imageSrc: image6,
     gradientColors: ['#B1F0D5', '#FE9190'],
     polygon: [
       [0, 21],
@@ -52,7 +52,7 @@ export const LiveBackground = () => {
   })
 
   const bgImage03 = BackgroundPicture({
-    imageSrc: image3,
+    imageSrc: image14,
     gradientColors: ['#F0B1B1', '#C08FFF'],
     polygon: [
       [0, 1],
@@ -90,15 +90,15 @@ export const LiveBackground = () => {
       [100, 7],
       [0, 23]
     ],
-    scrollOffset: -2500
+    scrollOffset: -6600
   })
 
   return (
     <>
-      <Canvas draw={bgImage01.render} resize={bgImage01.resize} className={styles.image1}></Canvas>
-      <Canvas draw={bgImage02.render} resize={bgImage02.resize} className={styles.image2}></Canvas>
-      <Canvas draw={bgImage03.render} resize={bgImage03.resize} className={styles.image3}></Canvas>
-      <Canvas draw={bgImage04.render} resize={bgImage04.resize} className={styles.image4}></Canvas>
+      <Canvas draw={bgImage01.render} resize={bgImage01.resize} className={styles.image1} ></Canvas>
+      <Canvas draw={bgImage02.render} resize={bgImage02.resize} className={styles.image2} ></Canvas>
+      <Canvas draw={bgImage03.render} resize={bgImage03.resize} className={styles.image3} ></Canvas>
+      <Canvas draw={bgImage04.render} resize={bgImage04.resize} className={styles.image4} ></Canvas>
     </>
   )
 }
