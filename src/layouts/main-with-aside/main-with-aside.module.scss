@@ -35,7 +35,7 @@
     margin-top: 3rem;
     align-items: center;
 
-    @include media.min(499px) {
+    @include media.min(480px) {
         gap: 1em;
         flex-direction: row;
         align-items:initial;

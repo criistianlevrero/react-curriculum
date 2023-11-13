@@ -18,11 +18,10 @@
                     "./src"
                 ],
                 "alias": {
-                    
                     "@assets": "./src/assets",
-                    "@svg-library": "./src/foundations/svg-library/_sprites.svg",
+                    "@svg-library": "./src/style-foundations/svg-library/_sprites.svg",
                     "@components": "./src/components",
-                    "@foundations": "./src/foundations/scss",
+                    "@foundations": "./src/style-foundations/scss",
                     "@layouts": "./src/layouts",
                     "@pages": "./src/pages",
                     "@services": "./src/services"

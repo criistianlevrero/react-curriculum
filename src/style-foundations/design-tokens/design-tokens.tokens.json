@@ -22,7 +22,7 @@
     },
     "small": {
       "description": null,
-      "value": 1360,
+      "value": 1280,
       "type": "dimension",
       "extensions": {
         "org.lukasoppermann.figmaDesignTokens": {

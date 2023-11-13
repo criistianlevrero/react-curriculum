@@ -4,6 +4,8 @@ import { SectionWithTitle } from '@components/section-with-title/section-with-ti
 import { LoadingScreen } from '@components/loading-screen/loading-screen';
 import MainWithAsideLayout from '@layouts/main-with-aside/main-with-aside';
 import { ContentfulRichtext } from '@components/contentful-richtext/contentful-richtext';
+import { ToastMessage } from '@components/toast-message/toast-message';
+import { Button } from '@components/button/button';
 
 import { SideInfirmation } from './components/side-infirmation/side-infirmation';
 import { Qualifications } from './components/qualifications/qualifications'
@@ -55,6 +57,7 @@ export const Resume = () => {
           </>
         }
       />
+      <ToastMessage><Button iconName={"github"} href={"https://github.com/criistianlevrero/react-curriculum"} showLabel={true}>Check out the code of this site</Button></ToastMessage>
     </div>
   );
 }
