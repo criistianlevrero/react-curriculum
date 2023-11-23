@@ -22,7 +22,7 @@
     },
     "small": {
       "description": null,
-      "value": 1280,
+      "value": 1360,
       "type": "dimension",
       "extensions": {
         "org.lukasoppermann.figmaDesignTokens": {
@@ -33,6 +33,16 @@
     "medium": {
       "description": null,
       "value": 1680,
+      "type": "dimension",
+      "extensions": {
+        "org.lukasoppermann.figmaDesignTokens": {
+          "exportKey": "breakpoint"
+        }
+      }
+    },
+    "big": {
+      "description": null,
+      "value": 3008,
       "type": "dimension",
       "extensions": {
         "org.lukasoppermann.figmaDesignTokens": {

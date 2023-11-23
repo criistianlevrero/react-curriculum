@@ -17,6 +17,9 @@
   @include media.min(vars.$breakpoints-medium) {
     font-size: 15px
   }
+  @include media.min(vars.$breakpoints-big) {
+    font-size: 22px
+  }
 }
 
 body {
@@ -26,4 +29,11 @@ body {
   @include media.min(vars.$breakpoints-tablet) {
     background-color: vars.$color-gray-warm;
   }
+}
+
+ul {
+    padding-left: 1rem;
+    @include media.min(vars.$breakpoints-tablet) {  
+        padding-left: 2rem;
+    } 
 }
