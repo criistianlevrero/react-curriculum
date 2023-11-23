@@ -17,7 +17,7 @@ import fetchData from '@services/api'
 
 import styles from './resume.module.scss'
 
-import profileImage from '@assets/profile.webp'
+const profileImage = 'http://images.ctfassets.net/h2xj79xdxq5r/4twBbJMEBufQnmoZF6NDyB/7bf093c285de0032aa8c8f4dba1494b4/profile.webp'
 
 export const Resume = () => {
 
@@ -57,7 +57,7 @@ export const Resume = () => {
           </>
         }
       />
-      <ToastMessage><Button iconName={"github"} href={"https://github.com/criistianlevrero/react-curriculum"} showLabel={true}>Check out the code of this site</Button></ToastMessage>
+      <ToastMessage><Button iconName={"github"} href={"https://github.com/criistianlevrero/react-curriculum"} showLabel={true}>Check out the source code</Button></ToastMessage>
     </div>
   );
 }
