@@ -28,6 +28,11 @@
 
 .image4{
     @extend .canvas;
+    top: 430rem
+}
+
+.image5{
+    @extend .canvas;
     height: 60rem;
     bottom: 0;
 }
