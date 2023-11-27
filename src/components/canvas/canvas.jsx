@@ -22,7 +22,6 @@ export const Canvas = ({ draw, resize, ...rest }) => {
         canvas.width = width
         canvas.height = height
       }
-      console.log('resize')
       canvasSize = {width, height}
       resize(canvasSize)
     }

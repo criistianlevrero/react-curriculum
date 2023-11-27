@@ -15,6 +15,12 @@ const query = `{
 				iconWithLabel
 			}
 		}
+		profilePicture{
+			url
+			width
+			height
+			description
+		}
 	}
 	qualificationsCollection(limit: 100) {
 		items {
@@ -61,7 +67,7 @@ export default function fetchData(setpageModel) {
             console.error(errors);
         }
     
-        //console.log(data); // TODO: check why endpoints has being called several times
+        console.log(data); // TODO: check why endpoints are being called several times
         // rerender the entire component with new data
         setpageModel(data);
     });

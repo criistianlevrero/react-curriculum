@@ -17,8 +17,6 @@ import fetchData from '@services/api'
 
 import styles from './resume.module.scss'
 
-const profileImage = 'http://images.ctfassets.net/h2xj79xdxq5r/4twBbJMEBufQnmoZF6NDyB/7bf093c285de0032aa8c8f4dba1494b4/profile.webp'
-
 export const Resume = () => {
 
   const [pageModel, setpageModel] = useState(null);
@@ -39,9 +37,10 @@ export const Resume = () => {
       <LiveBackground></LiveBackground>
       <MainWithAsideLayout
         aside={
-          <SideInfirmation profileImage={profileImage} mediaLinks={pageModel.personalData.mediaLinksCollection}></SideInfirmation>
+          <SideInfirmation profileImage={pageModel.personalData.profilePicture}
+            mediaLinks={pageModel.personalData.mediaLinksCollection}></SideInfirmation>
         }
-  
+
         main={
           <>
             <ResumeHeader name={pageModel.personalData.name} subheading={pageModel.personalData.subheadin}></ResumeHeader>

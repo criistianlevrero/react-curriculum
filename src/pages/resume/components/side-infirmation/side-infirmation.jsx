@@ -15,7 +15,11 @@ export const SideInfirmation = ({ profileImage, mediaLinks}) => {
       <div className={styles.picture}>
         <Card borders={true}>
           <div className={styles.pictureContainer}>
-            <img src={profileImage} className={styles.pictureImg} alt="una bella foto" />
+            <img src={profileImage.url}
+              className={styles.pictureImg}
+              alt={profileImage.description}
+              width={profileImage.width}
+              height={profileImage.height} />
           </div>
         </Card>
       </div>
