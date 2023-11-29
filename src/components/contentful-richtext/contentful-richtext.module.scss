@@ -1,3 +1,16 @@
 .paragraph {
     margin-top: 1.5rem;
 }
+
+.list {
+    display: grid;
+    list-style: none;
+    padding: 0;
+    grid-template-columns: 1fr 1fr 1fr;
+    li {
+        padding: 0.5rem;
+    }
+    p {
+        margin: 0;
+    }
+}

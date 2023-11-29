@@ -11,12 +11,15 @@ export const ContentfulRichtext = ({richtext}) => {
 
     const Text = ({ children }) => <p className={styles.paragraph}>{children}</p>;
 
+    const Ol = ({ children }) => <ol className={styles.list}>{children}</ol>;
+
     const options = {
         renderMark: {
             [MARKS.BOLD]: (text) => <Bold>{text}</Bold>,
         },
         renderNode: {
             [BLOCKS.PARAGRAPH]: (node, children) => <Text>{children}</Text>,
+            [BLOCKS.OL_LIST]: (node, children) => <Ol>{children}</Ol>,
         },
         //renderText: (text) => text.replace('!', '?'),
     };
