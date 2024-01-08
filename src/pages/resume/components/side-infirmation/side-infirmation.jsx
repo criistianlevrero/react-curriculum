@@ -44,6 +44,6 @@ export const SideInfirmation = ({ profileImage, mediaLinks}) => {
 }
 
 SideInfirmation.propTypes = {
-  profileImage: PropTypes.string.isRequired,
+  profileImage: PropTypes.object.isRequired,
   mediaLinks: PropTypes.object,
 }

@@ -3,7 +3,6 @@ import styles from './project.module.scss';
 
 
 export const Project = ({ projectName, year, allowBreak, children}) => {
-  console.log('allowBreak', allowBreak)
   return (
     <div className={`${styles.layout} ${allowBreak ? styles.breakable : ''}`}>
       <div className={styles.year}>{year}</div>

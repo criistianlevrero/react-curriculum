@@ -1,5 +1,3 @@
-import { useState, useEffect } from "react";
-
 import { SectionWithTitle } from '@components/section-with-title/section-with-title';
 import { LoadingScreen } from '@components/loading-screen/loading-screen';
 import MainWithAsideLayout from '@layouts/main-with-aside/main-with-aside';
@@ -13,45 +11,39 @@ import { WorkingExperience } from './components/working-experience/working-exper
 import { LiveBackground } from "./components/live-background/live-background";
 import { ResumeHeader } from "./components/resume-header/resume-header";
 
-import fetchData from '@services/api'
+import { useQuery } from '@apollo/client';
+import {CONTENT_QUERY} from '@services/api-data'
 
 import styles from './resume.module.scss'
 
 export const Resume = () => {
 
-  const [pageModel, setpageModel] = useState(null);
+  const { loading, error, data } = useQuery(CONTENT_QUERY);
 
-  useEffect(() => {
-    fetchData(setpageModel)
-  }, [setpageModel]);
+  if (loading) return <LoadingScreen></LoadingScreen>;
 
-  if (!pageModel) {
-    //if (true) {
-    return (
-      <LoadingScreen></LoadingScreen>
-    );
-  }
+  if (error) return <p>Error : {error.message}</p>;
 
   return (
     <div className={styles.resumeContainer}>
       <LiveBackground></LiveBackground>
       <MainWithAsideLayout
         aside={
-          <SideInfirmation profileImage={pageModel.personalData.profilePicture}
-            mediaLinks={pageModel.personalData.mediaLinksCollection}></SideInfirmation>
+          <SideInfirmation profileImage={data.personalData.profilePicture}
+            mediaLinks={data.personalData.mediaLinksCollection}></SideInfirmation>
         }
 
         main={
           <>
-            <ResumeHeader name={pageModel.personalData.name} subheading={pageModel.personalData.subheadin}></ResumeHeader>
+            <ResumeHeader name={data.personalData.name} subheading={data.personalData.subheadin}></ResumeHeader>
             <SectionWithTitle title='Profile'>
-              <ContentfulRichtext richtext={pageModel.personalData.profile.json} />
+              <ContentfulRichtext richtext={data.personalData.profile.json} />
             </SectionWithTitle>
             <SectionWithTitle title='Qualifications'>
-              <Qualifications dataModel={pageModel.qualificationsCollection.items} />
+              <Qualifications dataModel={data.qualificationsCollection.items} />
             </SectionWithTitle>
             <SectionWithTitle title='Work experience'>
-              <WorkingExperience dataModel={pageModel.companyCollection.items} />
+              <WorkingExperience dataModel={data.companyCollection.items} />
             </SectionWithTitle>
           </>
         }
