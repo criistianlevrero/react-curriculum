@@ -4,3 +4,13 @@
 .resumeContainer {
   position: relative;
 }
+
+.stickyButton {
+  @media print {
+    display: none;
+  }
+}
+
+.workingExperience {
+  break-before: page;
+}

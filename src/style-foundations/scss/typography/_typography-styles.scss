@@ -1,5 +1,6 @@
 @use "sass:math";
 @use "sass:map";
+@use "sass:list";
 @use 'font-faces';
 @use './../variables/variables' as vars;
 
@@ -167,11 +168,23 @@ $properties:
 
 $base-font-size: 15px;
 
+$pixelProperties:
+  font-size,
+  letter-spacing,
+  line-height,
+  paragraph-indent,
+  paragraph-spacing;
+
 @mixin typographyFactory($style) {
   @each $property in $properties {
     $value: map.get($typographic-styles, 'typography-#{$style}-#{$property}');
-    @if $property == 'font-size' {
-      #{$property}: math.div($value, $base-font-size) * 1rem;
+    @if list.index($pixelProperties, $property) {
+      @if $value == 0 {
+        #{$property}: 0;
+      }
+      @else {
+        #{$property}: math.div($value, $base-font-size) * 1rem;
+      }
     }
     @else {
       #{$property}: $value;
@@ -184,5 +197,3 @@ $base-font-size: 15px;
     @include typographyFactory($style);
   }
 }
-
-

@@ -13,6 +13,10 @@
     margin: 10rem 0 0 auto;
   }
 
+  @media print {
+    max-width: 19rem;
+  }
+
   &Container {
     padding-bottom: 100%;
     height: 0;
@@ -52,5 +56,8 @@
     margin: 1.5rem 0 0 0;
     justify-content: end;
     gap: 1.5rem;
+    @media print {
+      display: none;
+    }
   }
 }

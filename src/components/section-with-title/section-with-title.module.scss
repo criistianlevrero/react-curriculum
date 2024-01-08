@@ -1,10 +1,12 @@
 @use '@foundations/typography/typography-styles' as typography;
+@use '@foundations/general/utils' as utils;
 
 .section {
     background-image: url(@assets/separator.svg);
     padding-top: 9rem;
     background-repeat: no-repeat;
     background-position: 50% 5rem;
+    @include utils.printableBackground();
 }
 
 .title {

@@ -20,6 +20,9 @@
   @include media.min(vars.$breakpoints-big) {
     font-size: 22px
   }
+  @media print {
+    font-size: 9pt;
+  }
 }
 
 body {

@@ -13,7 +13,7 @@ export const WorkingExperience = ({ dataModel }) => {
             {dataModel.map((company, index) => (
                 <Company companyName={company.companyName} from={getMonthYear(company.startDate)} to={getMonthYear(company.finishDate)} key={index}>
                 {company.linkedFrom.projectCollection.items.map((project, index) => (
-                    <Project projectName={project.projectName} year={getYear(project.year)} key={index}>
+                    <Project projectName={project.projectName} year={getYear(project.year)} allowBreak={project.allowPageBreak} key={index}>
                         <ContentfulRichtext richtext={project.positionDescription?.json} />
                     </Project>
                 ))}

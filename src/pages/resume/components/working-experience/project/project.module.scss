@@ -8,8 +8,14 @@
     column-gap: 2rem;
     margin-top: 2.5rem;
     margin-bottom: 0.5rem;
+    page-break-inside: avoid;
+
     @include media.min(vars.$breakpoints-tablet) {
         grid-template-columns: 8.5rem auto;
+    }
+
+    @media print {
+        display: flex;
     }
 }
 
@@ -36,4 +42,8 @@
 
 .description {
     margin-top: 1rem;
+}
+
+.breakable {
+    page-break-inside: auto;
 }

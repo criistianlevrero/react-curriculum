@@ -22,6 +22,14 @@
         width: fit-content;
         max-width: none;
     }
+    @media print {
+        display: block;
+        grid-template-columns: auto 52rem;
+        width: fit-content;
+        max-width: none;
+        gap: 1rem;
+        margin: 2rem;
+    }
 }
 
 .aside {
@@ -51,6 +59,14 @@
         justify-content: flex-start;
         padding: 0;
         flex-direction: column;
+    }
+    @media print {
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-end;
+        margin-top: 0;
+        gap: 2rem;
+        padding: 0;
     }
 }
 

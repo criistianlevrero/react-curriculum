@@ -11,7 +11,9 @@ export const ContentfulRichtext = ({richtext}) => {
 
     const Text = ({ children }) => <p className={styles.paragraph}>{children}</p>;
 
-    const Ol = ({ children }) => <ol className={styles.list}>{children}</ol>;
+    const Ol = ({ children }) => <ol className={styles.orderedList}>{children}</ol>;
+
+    const Li = ({ children }) => <li className={styles.list}>{children}</li>;
 
     const options = {
         renderMark: {
@@ -20,6 +22,7 @@ export const ContentfulRichtext = ({richtext}) => {
         renderNode: {
             [BLOCKS.PARAGRAPH]: (node, children) => <Text>{children}</Text>,
             [BLOCKS.OL_LIST]: (node, children) => <Ol>{children}</Ol>,
+            [BLOCKS.LIST_ITEM]: (node, children) => <Li>{children}</Li>,
         },
         //renderText: (text) => text.replace('!', '?'),
     };

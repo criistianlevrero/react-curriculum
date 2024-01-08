@@ -16,6 +16,9 @@
   border: none;
   background: none;
   padding: 0;
+  @media print {
+    font-size: 1.1rem;
+  }
   
 }
 

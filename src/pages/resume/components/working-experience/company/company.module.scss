@@ -1,7 +1,7 @@
 @use '@foundations/typography/typography-styles' as typography;
 
 .experience {
-  
+    page-break-inside: avoid;
 }
 
 .companyName {

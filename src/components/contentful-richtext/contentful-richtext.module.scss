@@ -2,7 +2,7 @@
     margin-top: 1.5rem;
 }
 
-.list {
+.orderedList {
     display: grid;
     list-style: none;
     padding: 0;
@@ -13,4 +13,8 @@
     p {
         margin: 0;
     }
+}
+
+.list {
+    page-break-inside: avoid;
 }

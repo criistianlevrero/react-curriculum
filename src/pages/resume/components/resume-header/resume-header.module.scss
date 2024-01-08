@@ -4,15 +4,23 @@
 
 .header {
     margin: 2rem auto 1rem auto;
+    max-width: 37rem;
+
     @include media.min(vars.$breakpoints-tablet) {
         margin: 10rem auto 1rem auto;
     }
-    max-width: 37rem;
+
+    @media print {
+        max-width: none;
+    }
 
     &Title {
         @extend .typography-hero;
         color: vars.$color-brand-orange;
         text-align: center;
+        @media print {
+            font-size: 5rem;
+        }
     }
 
     &Description {
@@ -21,5 +29,9 @@
         top: -10.5rem;
         height: 0;
         position: relative;
+
+        @media print {
+            top: 0;
+        }
     }
 }
