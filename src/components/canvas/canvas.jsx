@@ -44,6 +44,8 @@ export const Canvas = ({ draw, resize, ...rest }) => {
     // AnimationFrame
     let lastRenderTime = 0
     
+    let animationFrameId
+
     const render = (timestamp) => {
       if (timestamp - lastRenderTime > 16) {
         lastRenderTime = timestamp
@@ -51,12 +53,12 @@ export const Canvas = ({ draw, resize, ...rest }) => {
           draw(context, timestamp)
         }
       }
-      window.requestAnimationFrame(render)
+      animationFrameId = window.requestAnimationFrame(render)
     }
-    render()
+    animationFrameId = window.requestAnimationFrame(render)
     
     return () => {
-      window.cancelAnimationFrame(render)
+      window.cancelAnimationFrame(animationFrameId)
       window.removeEventListener('resize', resizeCanvasToDisplaySize);
     }
   }, [draw, resize])

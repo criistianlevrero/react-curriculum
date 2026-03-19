@@ -35,7 +35,7 @@ export const Resume = () => {
 
         main={
           <>
-            <ResumeHeader name={data.personalData.name} subheading={data.personalData.subheadin}></ResumeHeader>
+            <ResumeHeader name={data.personalData.name} subheading={data.personalData.subheading}></ResumeHeader>
             <SectionWithTitle title='Profile'>
               <ContentfulRichtext richtext={data.personalData.profile.json} />
             </SectionWithTitle>

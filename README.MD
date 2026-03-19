@@ -11,3 +11,27 @@ Take a look into src/style-foundations
 
 [Style dictionary](https://amzn.github.io/style-dictionary/#/). is a library 
 for convert design tokens to scss. 
+
+## environment variables
+
+Create a `.env.local` file at project root with:
+
+VITE_CONTENTFUL_SPACE_ID=your_contentful_space_id
+VITE_CONTENTFUL_TOKEN=your_contentful_delivery_token
+
+## node version
+
+This project is configured to use Node.js 22.
+
+Using nvm:
+
+```bash
+nvm install 22
+nvm use 22
+```
+
+You can also use the pinned project version:
+
+```bash
+nvm use
+```

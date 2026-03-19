@@ -14,8 +14,10 @@ export const Button = ({children, iconName = '', showLabel = false, onClick = ()
             aria-label={ children }
             onClick={onClick}
             className={styles.button}
+            { ...(Element === 'button' && { type: 'button' }) }
             { ...(href && { href: href })}
-            { ...(target && { target: target }) } >
+            { ...(href && target && { target: target }) }
+            { ...(href && target === '_blank' && { rel: 'noopener noreferrer' }) } >
             { iconName && iconPosition == 'left' && <Icon {...iconProps}/> }
             { showLabel ? children : '' }
             { iconName && iconPosition == 'right' && <Icon {...iconProps}/> }

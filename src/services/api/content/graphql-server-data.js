@@ -1,9 +1,12 @@
 import { InMemoryCache } from '@apollo/client'
 
+const contentfulSpaceId = import.meta.env.VITE_CONTENTFUL_SPACE_ID
+const contentfulToken = import.meta.env.VITE_CONTENTFUL_TOKEN
+
 export const serverData = {
-    uri: 'https://graphql.contentful.com/content/v1/spaces/h2xj79xdxq5r/',
+    uri: `https://graphql.contentful.com/content/v1/spaces/${contentfulSpaceId}/`,
     headers: {
-      Authorization: 'Bearer dtD_lAL0wrlAybfYaTIZ7Fk4yWwHufbpTWaibFd2VwE',
+      Authorization: `Bearer ${contentfulToken}`,
     },
     cache: new InMemoryCache(),
   }
