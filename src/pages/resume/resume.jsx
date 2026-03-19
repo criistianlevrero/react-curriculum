@@ -48,7 +48,9 @@ export const Resume = () => {
           </>
         }
       />
-      <ToastMessage><Button iconName={"github"} href={"https://github.com/criistianlevrero/react-curriculum"} showLabel={true}>Check out the source code</Button></ToastMessage>
+      <div className={styles.stickyButton}>
+        <ToastMessage><Button iconName={"github"} href={"https://github.com/criistianlevrero/react-curriculum"} showLabel={true}>Check out the source code</Button></ToastMessage>
+      </div>
     </div>
   );
 }
