@@ -12,36 +12,51 @@ Take a look into src/style-foundations
 [Style dictionary](https://amzn.github.io/style-dictionary/#/). is a library 
 for convert design tokens to scss. 
 
-## environment variables
+## getting started
 
-Create a `.env.local` file at project root with:
+Create a `.env.local` file at project root (see `.env.example`):
 
+```
 VITE_CONTENTFUL_SPACE_ID=your_contentful_space_id
 VITE_CONTENTFUL_TOKEN=your_contentful_delivery_token
-VITE_CONTENTFUL_ENVIRONMENT=master (optional, defaults to master)
+VITE_CONTENTFUL_ENVIRONMENT=master   # optional, defaults to master
+```
 
-To run content model migrations, also create a `.env.cma` file with a Content Management API token:
+To edit content from the terminal or run migrations, also create `.env.cma` with a Content Management API token. Never prefix it with `VITE_`, or it will be bundled into the client:
 
+```
 CMA_CONTENTFUL_TOKEN=your_contentful_management_token
+```
 
-Never prefix this token with `VITE_`, or it will be bundled into the client.
+```bash
+npm install
+npm run dev
+```
 
 ## multiple resumes
 
-Each CV is a `resume` entry in Contentful:
-
-- `/` shows the resume with `isDefault` enabled.
-- `/cv/<slug>` shows any other resume.
-
-A resume can be `basedOn` another one: its empty block fields (personal data, qualifications, projects) are inherited. To change a single block, duplicate the entry, edit it, point its `replaces` field to the original and add it to the resume `replacements`.
-
-## content migrations
-
-Content model changes live in `migrations/`. Try them on a sandbox environment first:
+Each CV is a `resume` entry in Contentful. `/` shows the default one and `/cv/<slug>` any other. A CV can be based on another and replace only the blocks that differ.
 
 ```bash
-npm run migrate -- dev migrations/01-create-resume.cjs
+npm run cms -- list            # resumes in Contentful
+npm run cms -- show default    # blocks of one resume
+npm run cms -- help            # every command
 ```
+
+See [docs/content-model.md](docs/content-model.md).
+
+## PDF export
+
+```bash
+npm run pdf                    # exports/default.pdf
+npm run pdf -- <slug>          # exports/<slug>.pdf
+```
+
+See [docs/pdf-export.md](docs/pdf-export.md).
+
+## working with AI agents
+
+[CLAUDE.md](CLAUDE.md) is the guide for coding agents, and `.claude/skills/edit-resume` teaches Claude how to change resume content safely.
 
 ## node version
 

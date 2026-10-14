@@ -14,7 +14,8 @@
     "pdf": "node scripts/export-pdf.mjs",
     "test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --watch",
     "test:coverage": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage",
-    "migrate": "node --env-file=.env.local --env-file=.env.cma migrations/run.mjs"
+    "migrate": "node --env-file=.env.local --env-file=.env.cma migrations/run.mjs",
+    "cms": "node --env-file=.env.local --env-file=.env.cma scripts/cms.mjs"
   },
   "dependencies": {
     "@apollo/client": "^3.8.8",
