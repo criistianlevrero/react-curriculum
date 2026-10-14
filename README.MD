@@ -18,6 +18,30 @@ Create a `.env.local` file at project root with:
 
 VITE_CONTENTFUL_SPACE_ID=your_contentful_space_id
 VITE_CONTENTFUL_TOKEN=your_contentful_delivery_token
+VITE_CONTENTFUL_ENVIRONMENT=master (optional, defaults to master)
+
+To run content model migrations, also create a `.env.cma` file with a Content Management API token:
+
+CMA_CONTENTFUL_TOKEN=your_contentful_management_token
+
+Never prefix this token with `VITE_`, or it will be bundled into the client.
+
+## multiple resumes
+
+Each CV is a `resume` entry in Contentful:
+
+- `/` shows the resume with `isDefault` enabled.
+- `/cv/<slug>` shows any other resume.
+
+A resume can be `basedOn` another one: its empty block fields (personal data, qualifications, projects) are inherited. To change a single block, duplicate the entry, edit it, point its `replaces` field to the original and add it to the resume `replacements`.
+
+## content migrations
+
+Content model changes live in `migrations/`. Try them on a sandbox environment first:
+
+```bash
+npm run migrate -- dev migrations/01-create-resume.cjs
+```
 
 ## node version
 

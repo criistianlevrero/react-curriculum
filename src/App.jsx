@@ -1,4 +1,5 @@
 import { ApolloClient, ApolloProvider } from '@apollo/client'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
 
 import { Resume } from './pages/resume/resume'
@@ -15,7 +16,13 @@ export default function App() {
 
   return (
     <ApolloProvider client={client}>
-      <Resume></Resume>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Resume />} />
+          <Route path="/cv/:slug" element={<Resume />} />
+          <Route path="*" element={<p>Page not found</p>} />
+        </Routes>
+      </BrowserRouter>
     </ApolloProvider>
   );
 }

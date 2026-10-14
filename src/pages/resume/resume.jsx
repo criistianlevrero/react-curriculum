@@ -12,38 +12,48 @@ import { LiveBackground } from "./components/live-background/live-background";
 import { ResumeHeader } from "./components/resume-header/resume-header";
 
 import { useQuery } from '@apollo/client';
-import {CONTENT_QUERY} from '@services/api-data'
+import { useParams } from 'react-router-dom';
+import {CONTENT_QUERY, resolveResume} from '@services/api-data'
 
 import styles from './resume.module.scss'
 
 export const Resume = () => {
 
-  const { loading, error, data } = useQuery(CONTENT_QUERY);
+  const { slug } = useParams();
+  const { loading, error, data } = useQuery(CONTENT_QUERY, {
+    variables: { where: slug ? { slug } : { isDefault: true } },
+  });
 
   if (loading) return <LoadingScreen></LoadingScreen>;
 
   if (error) return <p>Error : {error.message}</p>;
+
+  const resume = data.resumeCollection.items[0];
+
+  if (!resume) return <p>Resume not found</p>;
+
+  const { personalData, qualifications, companies } = resolveResume(resume);
 
   return (
     <div className={styles.resumeContainer}>
       <LiveBackground></LiveBackground>
       <MainWithAsideLayout
         aside={
-          <SideInfirmation profileImage={data.personalData.profilePicture}
-            mediaLinks={data.personalData.mediaLinksCollection}></SideInfirmation>
+          <SideInfirmation profileImage={personalData.profilePicture}
+            mediaLinks={personalData.mediaLinksCollection}></SideInfirmation>
         }
 
         main={
           <>
-            <ResumeHeader name={data.personalData.name} subheading={data.personalData.subheading}></ResumeHeader>
+            <ResumeHeader name={personalData.name} subheading={personalData.subheading}></ResumeHeader>
             <SectionWithTitle title='Profile'>
-              <ContentfulRichtext richtext={data.personalData.profile.json} />
+              <ContentfulRichtext richtext={personalData.profile.json} />
             </SectionWithTitle>
             <SectionWithTitle title='Qualifications'>
-              <Qualifications dataModel={data.qualificationsCollection.items} />
+              <Qualifications dataModel={qualifications} />
             </SectionWithTitle>
             <SectionWithTitle title='Work experience'>
-              <WorkingExperience dataModel={data.companyCollection.items} />
+              <WorkingExperience dataModel={companies} />
             </SectionWithTitle>
           </>
         }

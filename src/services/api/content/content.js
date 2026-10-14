@@ -1,59 +1,99 @@
 import { gql } from '@apollo/client'
 
-export const CONTENT_QUERY = gql`{
-	personalData(id: "2wscO3EoyDEFK5PPX4R424") {
-		name
-		subheading
-		email
-		profile {
-			json
-		}
-		location
-		mediaLinksCollection(limit: 100) {
-			items {
-				iconId
-				linkLabel
-				url
-				iconWithLabel
-			}
-		}
-		profilePicture{
+export const CONTENT_QUERY = gql`
+fragment PersonalDataFields on PersonalData {
+	sys { id }
+	name
+	subheading
+	email
+	profile {
+		json
+	}
+	location
+	mediaLinksCollection(limit: 20) {
+		items {
+			iconId
+			linkLabel
 			url
-			width
-			height
-			description
+			iconWithLabel
 		}
 	}
-	qualificationsCollection(limit: 100) {
+	profilePicture {
+		url
+		width
+		height
+		description
+	}
+}
+
+fragment QualificationFields on Qualifications {
+	sys { id }
+	name
+	description {
+		json
+	}
+	rating
+}
+
+fragment ProjectFields on Project {
+	sys { id }
+	year
+	projectName
+	positionDescription {
+		json
+	}
+	allowPageBreak
+	company {
+		sys { id }
+		companyName
+		startDate
+		finishDate
+	}
+}
+
+fragment ResumeBlocks on Resume {
+	personalData {
+		...PersonalDataFields
+	}
+	qualificationsCollection(limit: 50) {
 		items {
-			name
-			description {
-				json
+			...QualificationFields
+		}
+	}
+	projectsCollection(limit: 50) {
+		items {
+			...ProjectFields
+		}
+	}
+}
+
+query Resume($where: ResumeFilter!) {
+	resumeCollection(where: $where, limit: 1) {
+		items {
+			...ResumeBlocks
+			basedOn {
+				...ResumeBlocks
 			}
-			rating
-		}
-	}
-	companyCollection(limit: 100, order: startDate_DESC) {
-		items {
-			companyName
-			startDate
-			finishDate
-			linkedFrom {
-				projectCollection(limit: 100, order: year_DESC) {
-					items {
-						year
-						projectName
-						positionDescription {
-							json
-						}
-						allowPageBreak
+			replacementsCollection(limit: 50) {
+				items {
+					... on PersonalData {
+						...PersonalDataFields
+						replaces { sys { id } }
+					}
+					... on Qualifications {
+						...QualificationFields
+						replaces { sys { id } }
+					}
+					... on Project {
+						...ProjectFields
+						replaces { sys { id } }
 					}
 				}
 			}
 		}
 	}
 	siteStringsCollection(limit: 100) {
-		items{
+		items {
 			identifier
 			content
 		}
