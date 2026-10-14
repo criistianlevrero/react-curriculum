@@ -11,6 +11,10 @@ const lazyScroll = () => {
 }
 
 
+export const defaultTransformMatrix = (matrix, uW, uH, scroll) => matrix
+    .rotate(scroll / 450 * -1)
+    .translate((uW * -8), (uH * -115) + scroll / 5)
+
 export const BackgroundPicture = ({imageSrc, polygon, scrollOffset = 0, transformMatrix, gradientColors = ['#7CE4B8','#FF4343'], lowerGradientPoly, upperGradientPoly}) => {
 
     // init
@@ -22,9 +26,7 @@ export const BackgroundPicture = ({imageSrc, polygon, scrollOffset = 0, transfor
     let uW, uH
 
     if (!transformMatrix) {
-        transformMatrix = (matrix, uW, uH, scroll) => matrix
-            .rotate(scroll / 450 * -1)
-            .translate((uW * -8), (uH * -115) + scroll / 5)
+        transformMatrix = defaultTransformMatrix
     }
 
 

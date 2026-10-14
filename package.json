@@ -11,6 +11,7 @@
     "build": "vite build",
     "lint": "eslint src --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
+    "pdf": "node scripts/export-pdf.mjs",
     "test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --watch",
     "test:coverage": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --coverage",
     "migrate": "node --env-file=.env.local --env-file=.env.cma migrations/run.mjs"
@@ -45,6 +46,7 @@
     "identity-obj-proxy": "^3.0.0",
     "jest": "^29.7.0",
     "jest-environment-jsdom": "^29.7.0",
+    "puppeteer": "^25.13.0",
     "sass": "^1.63.6",
     "vite": "^4.4.0"
   }

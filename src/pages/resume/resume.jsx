@@ -12,7 +12,7 @@ import { LiveBackground } from "./components/live-background/live-background";
 import { ResumeHeader } from "./components/resume-header/resume-header";
 
 import { useQuery } from '@apollo/client';
-import { useParams } from 'react-router-dom';
+import { useParams, useSearchParams } from 'react-router-dom';
 import {CONTENT_QUERY, resolveResume} from '@services/api-data'
 
 import styles from './resume.module.scss'
@@ -20,6 +20,8 @@ import styles from './resume.module.scss'
 export const Resume = () => {
 
   const { slug } = useParams();
+  const [searchParams] = useSearchParams();
+  const isExport = searchParams.has('export');
   const { loading, error, data } = useQuery(CONTENT_QUERY, {
     variables: { where: slug ? { slug } : { isDefault: true } },
   });
@@ -36,7 +38,7 @@ export const Resume = () => {
 
   return (
     <div className={styles.resumeContainer}>
-      <LiveBackground></LiveBackground>
+      <LiveBackground isStatic={isExport}></LiveBackground>
       <MainWithAsideLayout
         aside={
           <SideInfirmation profileImage={personalData.profilePicture}
@@ -58,9 +60,11 @@ export const Resume = () => {
           </>
         }
       />
-      <div className={styles.stickyButton}>
-        <ToastMessage><Button iconName={"github"} href={"https://github.com/criistianlevrero/react-curriculum"} showLabel={true}>Check out the source code</Button></ToastMessage>
-      </div>
+      {!isExport && (
+        <div className={styles.stickyButton}>
+          <ToastMessage><Button iconName={"github"} href={"https://github.com/criistianlevrero/react-curriculum"} showLabel={true}>Check out the source code</Button></ToastMessage>
+        </div>
+      )}
     </div>
   );
 }

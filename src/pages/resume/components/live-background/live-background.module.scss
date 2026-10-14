@@ -36,3 +36,22 @@
     height: 60rem;
     bottom: 0;
 }
+
+.static {
+    overflow: hidden;
+    background-color: rgb(245, 241, 240);
+}
+
+.staticPolygon {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+}
+
+.staticPattern {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform-origin: 0 0;
+    background-repeat: repeat;
+}

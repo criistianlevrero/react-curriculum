@@ -1,9 +1,10 @@
 import { useRef, useEffect } from 'react'
 import { PropTypes } from 'prop-types';
 
+export const CANVAS_DOWNSCALE = 0.8
+
 export const Canvas = ({ draw, resize, ...rest }) => {
   const canvasRef = useRef(null)
-  const downScale = 0.8
   const viewBoundaryRatio= 1.8
   
   useEffect(() => {
@@ -15,8 +16,8 @@ export const Canvas = ({ draw, resize, ...rest }) => {
     function resizeCanvasToDisplaySize() {
     
       let { width, height } = canvas.getBoundingClientRect()
-      width *= downScale
-      height *= downScale
+      width *= CANVAS_DOWNSCALE
+      height *= CANVAS_DOWNSCALE
 
       if (canvas.width !== width || canvas.height !== height) {
         canvas.width = width
